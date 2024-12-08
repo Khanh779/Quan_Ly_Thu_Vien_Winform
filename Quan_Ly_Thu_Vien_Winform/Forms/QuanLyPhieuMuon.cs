@@ -61,7 +61,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                     string getReaderFullName =
                         XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia.ContainsKey(a.MaDocGia) ? XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia[a.MaDocGia].HoTen : "<ko xác định>";
 
-                    var chiTe = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon[a.MaPhieuMuon];
+                    var chiTe = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.ContainsKey(a.MaPhieuMuon) ? XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon[a.MaPhieuMuon] : null;
 
                     dataGridView1.Rows.Add(a.MaPhieuMuon, a.MaDocGia, getReaderFullName, a.NgayMuon, a.NgayHenTra, chiTe.TinhTrangTruocKhiMuon, chiTe.SoLuong);
                 }
