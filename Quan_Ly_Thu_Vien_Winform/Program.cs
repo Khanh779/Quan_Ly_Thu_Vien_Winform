@@ -20,18 +20,37 @@ namespace Quan_Ly_Thu_Vien_Winform
         {
             //string updateUrl = "https://github.com/Khanh779/Quan_Ly_Thu_Vien_Winform/raw/refs/heads/master/Quan_Ly_Thu_Vien_Winform/bin/Debug/Quan_Ly_Thu_Vien_Winform.exe";
             //string fileName = updateUrl.Substring(updateUrl.LastIndexOf('/') + 1);
-            //string localPath = Application.StartupPath + "\\" + fileName + ".tmp";
-            //using (WebClient client = new WebClient())
+            //string localPath = Application.StartupPath + "\\" + fileName;
+
+            //if (File.Exists(localPath))
             //{
-            //    client.DownloadFile(updateUrl, localPath);
-            //}
-            //if (File.Exists(Application.StartupPath + "\\" + fileName))
-            //{
-            //    File.Delete(Application.StartupPath + "\\" + fileName);
-            //    File.Replace(localPath, Application.StartupPath + "\\" + fileName, null);
+            //    try
+            //    {
+            //        File.Delete(localPath);
+            //    }
+            //    catch (Exception ex)
+            //    {
+
+            //    }
             //}
 
+            //using (WebClient client = new WebClient())
+            //{
+            //    try
+            //    {
+            //        client.DownloadFile(updateUrl, localPath);
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show("Lỗi khi tải file: " + ex.Message);
+            //        return;
+            //    }
+            //}
+
+
+
             //MessageBox.Show("Đã cập nhật file " + fileName);
+
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
