@@ -36,7 +36,7 @@ namespace Quan_Ly_Thu_Vien_Winform
         }
 
 
-        public static void DocFile(string filePath = "DuLieu_LuuTru.dk")
+        public static bool DocFile(string filePath = "DuLieu_LuuTru.dk")
         {
             if (File.Exists(filePath))
             {
@@ -47,19 +47,22 @@ namespace Quan_Ly_Thu_Vien_Winform
                         BinaryFormatter bf = new BinaryFormatter();
                         TruyCap_DuLieu = (TruyCap_DuLieu)bf.Deserialize(fs);  // Đọc dữ liệu từ file
                     }
+                    return true;
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
+                    return false;
                 }
             }
             else
             {
                 Console.WriteLine("File not exist");
+                return false;
             }
         }
 
-        public static void GhiFile(string filePath = "DuLieu_LuuTru.dk")
+        public static bool GhiFile(string filePath = "DuLieu_LuuTru.dk")
         {
             try
             {
@@ -68,10 +71,12 @@ namespace Quan_Ly_Thu_Vien_Winform
                     BinaryFormatter bf = new BinaryFormatter();
                     bf.Serialize(fs, TruyCap_DuLieu);  // Ghi dữ liệu vào file
                 }
+                return true;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                return false;
             }
         }
 
