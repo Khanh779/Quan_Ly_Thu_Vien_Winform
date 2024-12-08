@@ -20,11 +20,9 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
         private void QuanLyPhieuMuon_Load(object sender, EventArgs e)
         {
-            dateTimePicker2.Value = dateTimePicker2.Value.AddDays(7);
-
-            txt_ReaderCode.AutoCompleteCustomSource.AddRange(XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia.Keys.ToArray());
-            txt_ReaderCode.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            txt_ReaderCode.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            txt_BorrowCode.AutoCompleteCustomSource.AddRange(XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.Keys.ToArray());
+            txt_BorrowCode.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txt_BorrowCode.AutoCompleteSource = AutoCompleteSource.CustomSource;
 
 
 
@@ -34,7 +32,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
         private void txt_ReaderCode_TextChanged(object sender, EventArgs e)
         {
-            txt_BorrowCode.Text = XuLy_DuLieu.TaoMaMuon(txt_ReaderCode.Text);
+            txt_ReturnCode.Text = XuLy_DuLieu.TaoMaTra(txt_BorrowCode.Text);
 
             if (dataGridView1.SelectedRows.Count > 0)
                 dataGridView1.SelectedRows[0].Selected = false;
@@ -67,7 +65,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                     }
                 }
             }
-            LB_BorrowBillCount.Text = "Tổng số phiếu mượn: " + dataGridView1.Rows.Count;
+            LB_BorrowBillCount.Text = "Tổng số phiếu trả: " + dataGridView1.Rows.Count;
         }
 
         void LayDanhSachSach_Tu_MaPT(string maPT)
@@ -95,10 +93,30 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
 
 
-        ChiTiet_PhieuMuon chiTiet = new ChiTiet_PhieuMuon();
+        ChiTiet_PhieuTra chiTiet = new ChiTiet_PhieuTra();
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
+            ThongTin_PhieuTra phieuTra = new ThongTin_PhieuTra();
+            phieuTra.MaPhieuMuon = txt_BorrowCode.Text;
+            phieuTra.MaPhieuTra = txt_ReturnCode.Text;
+            phieuTra.NgayTra = dateTimePicker2.Value;
+
+            chiTiet.MaPhieuTra = phieuTra.MaPhieuTra;
+            chiTiet.TinhTrangSauMuon = txt_StatusAfterBorrow.Text;
+
+            if (!XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.ContainsKey(phieuTra.MaPhieuTra))
+            {
+                XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Add(phieuTra.MaPhieuTra, phieuTra);
+                XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuTra.Add(chiTiet.MaPhieuTra, chiTiet);
+
+                MessageBox.Show("Thêm phiếu trả thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Mã phiếu trả đã tồn tại", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
 
             LayDanhSachPhieuTra();
         }

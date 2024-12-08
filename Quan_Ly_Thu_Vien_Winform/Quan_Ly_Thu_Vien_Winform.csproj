@@ -61,6 +61,12 @@
     <Compile Include="DuLieu\ThongTin_PhieuMuon.cs" />
     <Compile Include="DuLieu\ThongTin_PhieuTra.cs" />
     <Compile Include="DuLieu\ThongTin_Sach.cs" />
+    <Compile Include="Forms\FormAddBorrowBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddBorrowBill.Designer.cs">
+      <DependentUpon>FormAddBorrowBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormAddReturnBill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     <Compile Include="XuLy_DuLieu.cs" />
     <EmbeddedResource Include="Controls\BookButton.resx">
       <DependentUpon>BookButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddBorrowBill.resx">
+      <DependentUpon>FormAddBorrowBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormAddReturnBill.resx">
       <DependentUpon>FormAddReturnBill.cs</DependentUpon>

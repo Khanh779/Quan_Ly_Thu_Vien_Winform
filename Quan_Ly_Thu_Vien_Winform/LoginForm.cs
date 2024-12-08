@@ -48,18 +48,18 @@ namespace Quan_Ly_Thu_Vien_Winform
             {
                 if (txtUserName.Text == "Admin" && txtPassword.Text == "Admin")
                 {
-                    MessageBox.Show("Đăng nhập thành công");
+                    MessageBox.Show("Đăng nhập thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MainForm.Instance.Show();
                     this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu");
+                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

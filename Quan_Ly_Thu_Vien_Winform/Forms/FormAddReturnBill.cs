@@ -33,17 +33,20 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
         private void txt_BorrowCode_TextChanged(object sender, EventArgs e)
         {
             string maPM = txt_BorrowCode.Text;
-            txt_ReturnCode.Text = XuLy_DuLieu.TaoMaTra(maPM.Split('-')[1]);
-            txt_ReaderCode.Text = maPM.Split('-')[1];
-
-            dateTimePicker1.Value = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.ContainsKey(maPM) ? XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon[maPM].NgayMuon : DateTime.Now;
-
-            dataGridView1.Rows.Clear();
-
-            foreach (var a in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon[maPM].DanhSach_SachMuon.Values)
+            if(txt_BorrowCode.Text!=String.Empty && txt_BorrowCode.Text.Contains("-"))
             {
-                dataGridView1.Rows.Add(a.MaSach, a.TenSach, a.TenTacGia, a.LoaiSach, a.NhaXuatBan, a.NamXuatBan);
-            }
+                txt_ReturnCode.Text = XuLy_DuLieu.TaoMaTra(maPM.Split('-')[1]);
+                txt_ReaderCode.Text = maPM.Split('-')[1];
+
+                dateTimePicker1.Value = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.ContainsKey(maPM) ? XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon[maPM].NgayMuon : DateTime.Now;
+
+                dataGridView1.Rows.Clear();
+
+                foreach (var a in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon[maPM].DanhSach_SachMuon.Values)
+                {
+                    dataGridView1.Rows.Add(a.MaSach, a.TenSach, a.TenTacGia, a.LoaiSach, a.NhaXuatBan, a.NamXuatBan);
+                }
+            }    
 
         }
 

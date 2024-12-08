@@ -110,5 +110,20 @@ namespace Quan_Ly_Thu_Vien_Winform
                 MessageBox.Show("Tạo dữ liệu mẫu thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void thêmPhiếuTrảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAddReturnBill formAddReturnBill = new FormAddReturnBill();
+            formAddReturnBill.MdiParent = MainForm.Instance;
+            formAddReturnBill.Show();
+
+        }
+
+        private void thêmPhiếuMượnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAddBorrowBill formAddBorrowBill = new FormAddBorrowBill();
+            formAddBorrowBill.MdiParent = MainForm.Instance;
+            formAddBorrowBill.Show();
+        }
     }
 }

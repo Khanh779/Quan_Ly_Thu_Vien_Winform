@@ -33,18 +33,26 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyPhieuTra));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txt_StatusBeforeBorrow = new System.Windows.Forms.TextBox();
+            this.txt_StatusAfterBorrow = new System.Windows.Forms.TextBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_ReaderCode = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.txt_BorrowCode = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_ReturnCode = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_Del = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
             this.LB_BorrowBillCount = new System.Windows.Forms.Label();
             this.txt_BorrowFilter = new System.Windows.Forms.TextBox();
@@ -58,15 +66,6 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -111,19 +110,64 @@
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Mã phiếu trả";
+            this.Column10.Name = "Column10";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Mã phiếu mượn";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Mã độc giả";
+            this.Column2.Name = "Column2";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Họ tên";
+            this.Column5.Name = "Column5";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Ngày mượn";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Ngày hẹn trả";
+            this.Column4.Name = "Column4";
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Ngày trả thực tế";
+            this.Column9.Name = "Column9";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Tình trạng sau mượn";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Số lượng";
+            this.Column8.Name = "Column8";
+            // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.txt_StatusBeforeBorrow);
+            this.groupBox1.Controls.Add(this.txt_StatusAfterBorrow);
             this.groupBox1.Controls.Add(this.dateTimePicker2);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txt_ReaderCode);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txt_BorrowCode);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txt_ReturnCode);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.groupBox1.Location = new System.Drawing.Point(598, 47);
@@ -143,15 +187,15 @@
             this.label8.TabIndex = 76;
             this.label8.Text = "Tình trạng sau mượn";
             // 
-            // txt_StatusBeforeBorrow
+            // txt_StatusAfterBorrow
             // 
-            this.txt_StatusBeforeBorrow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
-            this.txt_StatusBeforeBorrow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_StatusBeforeBorrow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_StatusBeforeBorrow.Location = new System.Drawing.Point(18, 277);
-            this.txt_StatusBeforeBorrow.Name = "txt_StatusBeforeBorrow";
-            this.txt_StatusBeforeBorrow.Size = new System.Drawing.Size(210, 25);
-            this.txt_StatusBeforeBorrow.TabIndex = 75;
+            this.txt_StatusAfterBorrow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
+            this.txt_StatusAfterBorrow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_StatusAfterBorrow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_StatusAfterBorrow.Location = new System.Drawing.Point(18, 277);
+            this.txt_StatusAfterBorrow.Name = "txt_StatusAfterBorrow";
+            this.txt_StatusAfterBorrow.Size = new System.Drawing.Size(210, 25);
+            this.txt_StatusAfterBorrow.TabIndex = 75;
             // 
             // dateTimePicker2
             // 
@@ -190,16 +234,16 @@
             this.label3.TabIndex = 58;
             this.label3.Text = "Ngày mượn";
             // 
-            // txt_ReaderCode
+            // txt_BorrowCode
             // 
-            this.txt_ReaderCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
-            this.txt_ReaderCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_ReaderCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_ReaderCode.Location = new System.Drawing.Point(18, 55);
-            this.txt_ReaderCode.Name = "txt_ReaderCode";
-            this.txt_ReaderCode.Size = new System.Drawing.Size(210, 25);
-            this.txt_ReaderCode.TabIndex = 57;
-            this.txt_ReaderCode.TextChanged += new System.EventHandler(this.txt_ReaderCode_TextChanged);
+            this.txt_BorrowCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
+            this.txt_BorrowCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_BorrowCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_BorrowCode.Location = new System.Drawing.Point(18, 55);
+            this.txt_BorrowCode.Name = "txt_BorrowCode";
+            this.txt_BorrowCode.Size = new System.Drawing.Size(210, 25);
+            this.txt_BorrowCode.TabIndex = 57;
+            this.txt_BorrowCode.TextChanged += new System.EventHandler(this.txt_ReaderCode_TextChanged);
             // 
             // label1
             // 
@@ -212,16 +256,16 @@
             this.label1.Text = "Mã phiếu trả (i)";
             this.toolTip1.SetToolTip(this.label1, "Mã phiếu trả được tạo tự động");
             // 
-            // txt_BorrowCode
+            // txt_ReturnCode
             // 
-            this.txt_BorrowCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
-            this.txt_BorrowCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_BorrowCode.Enabled = false;
-            this.txt_BorrowCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_BorrowCode.Location = new System.Drawing.Point(18, 107);
-            this.txt_BorrowCode.Name = "txt_BorrowCode";
-            this.txt_BorrowCode.Size = new System.Drawing.Size(210, 25);
-            this.txt_BorrowCode.TabIndex = 55;
+            this.txt_ReturnCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
+            this.txt_ReturnCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_ReturnCode.Enabled = false;
+            this.txt_ReturnCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_ReturnCode.Location = new System.Drawing.Point(18, 107);
+            this.txt_ReturnCode.Name = "txt_ReturnCode";
+            this.txt_ReturnCode.Size = new System.Drawing.Size(210, 25);
+            this.txt_ReturnCode.TabIndex = 55;
             // 
             // label2
             // 
@@ -232,23 +276,6 @@
             this.label2.Size = new System.Drawing.Size(122, 21);
             this.label2.TabIndex = 12;
             this.label2.Text = "Mã phiếu mượn";
-            // 
-            // btn_Del
-            // 
-            this.btn_Del.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Del.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.btn_Del.FlatAppearance.BorderSize = 0;
-            this.btn_Del.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Del.ForeColor = System.Drawing.Color.White;
-            this.btn_Del.Location = new System.Drawing.Point(652, 386);
-            this.btn_Del.Name = "btn_Del";
-            this.btn_Del.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btn_Del.Size = new System.Drawing.Size(116, 30);
-            this.btn_Del.TabIndex = 14;
-            this.btn_Del.Text = "Xoá / Trả";
-            this.toolTip1.SetToolTip(this.btn_Del, "Xoá trạng thái mượn, chuyển sang trạng thái trả");
-            this.btn_Del.UseVisualStyleBackColor = false;
-            this.btn_Del.Click += new System.EventHandler(this.btn_Del_Click);
             // 
             // btn_Add
             // 
@@ -369,7 +396,7 @@
             this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(133)))), ((int)(((byte)(237)))));
-            this.linkLabel2.Location = new System.Drawing.Point(560, 386);
+            this.linkLabel2.Location = new System.Drawing.Point(682, 386);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(86, 30);
             this.linkLabel2.TabIndex = 75;
@@ -377,51 +404,6 @@
             this.linkLabel2.Text = "Làm mới";
             this.linkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Mã phiếu trả";
-            this.Column10.Name = "Column10";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Mã phiếu mượn";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Mã độc giả";
-            this.Column2.Name = "Column2";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Họ tên";
-            this.Column5.Name = "Column5";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Ngày mượn";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Ngày hẹn trả";
-            this.Column4.Name = "Column4";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Ngày trả thực tế";
-            this.Column9.Name = "Column9";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Tình trạng sau mượn";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Số lượng";
-            this.Column8.Name = "Column8";
             // 
             // QuanLyPhieuTra
             // 
@@ -433,7 +415,6 @@
             this.Controls.Add(this.txt_BorrowFilter);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.LB_BorrowBillCount);
-            this.Controls.Add(this.btn_Del);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
@@ -457,11 +438,10 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_ReaderCode;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_BorrowCode;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_ReturnCode;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_Del;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Label LB_BorrowBillCount;
         private System.Windows.Forms.TextBox txt_BorrowFilter;
@@ -476,7 +456,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_StatusBeforeBorrow;
+        private System.Windows.Forms.TextBox txt_StatusAfterBorrow;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
