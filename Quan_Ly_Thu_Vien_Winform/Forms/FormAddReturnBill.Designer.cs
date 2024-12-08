@@ -164,15 +164,14 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label5.Location = new System.Drawing.Point(236, 63);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(122, 21);
+            this.label5.Size = new System.Drawing.Size(156, 21);
             this.label5.TabIndex = 95;
-            this.label5.Text = "Tình trạng sau trả";
+            this.label5.Text = "Tình trạng sau mượn";
             // 
             // txt_StatusAfterReturn
             // 
             this.txt_StatusAfterReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.txt_StatusAfterReturn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_StatusAfterReturn.Enabled = false;
             this.txt_StatusAfterReturn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_StatusAfterReturn.Location = new System.Drawing.Point(240, 87);
             this.txt_StatusAfterReturn.Name = "txt_StatusAfterReturn";
