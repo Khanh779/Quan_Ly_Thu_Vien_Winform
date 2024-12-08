@@ -41,14 +41,14 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_StatusAfterReturn = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_ReaderCode = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_ReaderCode = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.txt_BorrowCode = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_ReturnCode = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_Add = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -87,7 +87,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(530, 142);
+            this.dataGridView1.Size = new System.Drawing.Size(461, 142);
             this.dataGridView1.TabIndex = 71;
             // 
             // dataGridViewTextBoxColumn1
@@ -126,16 +126,16 @@
             this.panel1.Controls.Add(this.dateTimePicker2);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txt_StatusAfterReturn);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txt_ReaderCode);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txt_ReaderCode);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txt_BorrowCode);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txt_ReturnCode);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(51, 6);
+            this.panel1.Location = new System.Drawing.Point(16, 6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(458, 176);
             this.panel1.TabIndex = 72;
@@ -166,18 +166,18 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(122, 21);
             this.label5.TabIndex = 95;
-            this.label5.Text = "Họ tên";
+            this.label5.Text = "Tình trạng sau trả";
             // 
-            // textBox2
+            // txt_StatusAfterReturn
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Enabled = false;
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox2.Location = new System.Drawing.Point(240, 87);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(210, 25);
-            this.textBox2.TabIndex = 94;
+            this.txt_StatusAfterReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
+            this.txt_StatusAfterReturn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_StatusAfterReturn.Enabled = false;
+            this.txt_StatusAfterReturn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_StatusAfterReturn.Location = new System.Drawing.Point(240, 87);
+            this.txt_StatusAfterReturn.Name = "txt_StatusAfterReturn";
+            this.txt_StatusAfterReturn.Size = new System.Drawing.Size(210, 25);
+            this.txt_StatusAfterReturn.TabIndex = 94;
             // 
             // label4
             // 
@@ -189,16 +189,16 @@
             this.label4.TabIndex = 93;
             this.label4.Text = "Mã độc giả";
             // 
-            // textBox1
+            // txt_ReaderCode
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Enabled = false;
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(7, 87);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(210, 25);
-            this.textBox1.TabIndex = 92;
+            this.txt_ReaderCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
+            this.txt_ReaderCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_ReaderCode.Enabled = false;
+            this.txt_ReaderCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_ReaderCode.Location = new System.Drawing.Point(7, 87);
+            this.txt_ReaderCode.Name = "txt_ReaderCode";
+            this.txt_ReaderCode.Size = new System.Drawing.Size(210, 25);
+            this.txt_ReaderCode.TabIndex = 92;
             // 
             // dateTimePicker1
             // 
@@ -219,15 +219,18 @@
             this.label3.TabIndex = 90;
             this.label3.Text = "Ngày mượn";
             // 
-            // txt_ReaderCode
+            // txt_BorrowCode
             // 
-            this.txt_ReaderCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
-            this.txt_ReaderCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_ReaderCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_ReaderCode.Location = new System.Drawing.Point(7, 35);
-            this.txt_ReaderCode.Name = "txt_ReaderCode";
-            this.txt_ReaderCode.Size = new System.Drawing.Size(210, 25);
-            this.txt_ReaderCode.TabIndex = 89;
+            this.txt_BorrowCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txt_BorrowCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txt_BorrowCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
+            this.txt_BorrowCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_BorrowCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_BorrowCode.Location = new System.Drawing.Point(7, 35);
+            this.txt_BorrowCode.Name = "txt_BorrowCode";
+            this.txt_BorrowCode.Size = new System.Drawing.Size(210, 25);
+            this.txt_BorrowCode.TabIndex = 89;
+            this.txt_BorrowCode.TextChanged += new System.EventHandler(this.txt_BorrowCode_TextChanged);
             // 
             // label1
             // 
@@ -239,16 +242,16 @@
             this.label1.TabIndex = 88;
             this.label1.Text = "Mã phiếu trả (i)";
             // 
-            // txt_BorrowCode
+            // txt_ReturnCode
             // 
-            this.txt_BorrowCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
-            this.txt_BorrowCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_BorrowCode.Enabled = false;
-            this.txt_BorrowCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_BorrowCode.Location = new System.Drawing.Point(240, 35);
-            this.txt_BorrowCode.Name = "txt_BorrowCode";
-            this.txt_BorrowCode.Size = new System.Drawing.Size(210, 25);
-            this.txt_BorrowCode.TabIndex = 87;
+            this.txt_ReturnCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
+            this.txt_ReturnCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_ReturnCode.Enabled = false;
+            this.txt_ReturnCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_ReturnCode.Location = new System.Drawing.Point(240, 35);
+            this.txt_ReturnCode.Name = "txt_ReturnCode";
+            this.txt_ReturnCode.Size = new System.Drawing.Size(210, 25);
+            this.txt_ReturnCode.TabIndex = 87;
             // 
             // label2
             // 
@@ -267,19 +270,20 @@
             this.btn_Add.FlatAppearance.BorderSize = 0;
             this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Add.ForeColor = System.Drawing.Color.White;
-            this.btn_Add.Location = new System.Drawing.Point(472, 336);
+            this.btn_Add.Location = new System.Drawing.Point(350, 336);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btn_Add.Size = new System.Drawing.Size(70, 30);
+            this.btn_Add.Size = new System.Drawing.Size(123, 30);
             this.btn_Add.TabIndex = 73;
-            this.btn_Add.Text = "Thêm";
+            this.btn_Add.Text = "Xác nhận trả";
             this.btn_Add.UseVisualStyleBackColor = false;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // FormAddReturnBill
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(564, 378);
+            this.ClientSize = new System.Drawing.Size(495, 378);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
@@ -308,14 +312,14 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_StatusAfterReturn;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_ReaderCode;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_ReaderCode;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_BorrowCode;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_ReturnCode;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_Add;
     }

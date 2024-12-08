@@ -150,30 +150,10 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
         private void btn_Del_Click(object sender, EventArgs e)
         {
             var getMaPM = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            //if (MessageBox.Show("Xác nhận xoá/ trả từ phiếu mượn " + getMaPM + " phải ko?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //{
-            //    //XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.Remove(getMaPM);
-            //    //XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.Remove(getMaPM);
-            //    //MessageBox.Show("Đã xoá phiếu mượn", Application.ProductName + " Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            //    foreach (var a in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Values)
-            //    {
-            //        if (a.MaPhieuMuon == getMaPM)
-            //        {
-            //            MessageBox.Show("Phiếu mượn đã được trả, không thể xoá/ trả", Application.ProductName + " Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //            return;
-            //        }
-
-            //    }
-
-            //    ThongTin_PhieuTra phieuTra = new ThongTin_PhieuTra(getMaPM, XuLy_DuLieu.TaoMaTra(getMaPM), "", DateTime.Now);
-            //    XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Add(phieuTra.MaPhieuTra, phieuTra);
-
-
-            //    LayDanhSachPhieuMuon();
-            //}
+         
 
             FormAddReturnBill formAddReturnBill = new FormAddReturnBill();
+            formAddReturnBill.SetPreviewBorrowCode(getMaPM);
             formAddReturnBill.MdiParent = MainForm.Instance;
             formAddReturnBill.Show();
         }
