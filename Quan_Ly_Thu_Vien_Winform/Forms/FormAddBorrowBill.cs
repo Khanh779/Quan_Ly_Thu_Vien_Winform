@@ -71,6 +71,9 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
             string getMaPM = txt_ReaderID.Text;
             ThongTin_PhieuMuon phieuMuon = new ThongTin_PhieuMuon();
+
+
+
             phieuMuon.MaPhieuMuon = txt_BorrowCode.Text;
             phieuMuon.MaDocGia = txt_ReaderID.Text;
             phieuMuon.NgayMuon = dateTimePicker1.Value;

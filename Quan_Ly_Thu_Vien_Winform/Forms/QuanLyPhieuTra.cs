@@ -105,6 +105,18 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             chiTiet.MaPhieuTra = phieuTra.MaPhieuTra;
             chiTiet.TinhTrangSauMuon = txt_StatusAfterBorrow.Text;
 
+            if(!XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.ContainsKey(phieuTra.MaPhieuMuon))
+            {
+                MessageBox.Show("Mã phiếu mượn không tồn tại", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            if(XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.ContainsKey(phieuTra.MaPhieuTra))
+            {                                                                                                                                   
+                MessageBox.Show("Mã phiếu trả đã tồn tại trong danh sách phiếu trả", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             if (!XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.ContainsKey(phieuTra.MaPhieuTra))
             {
                 XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Add(phieuTra.MaPhieuTra, phieuTra);
