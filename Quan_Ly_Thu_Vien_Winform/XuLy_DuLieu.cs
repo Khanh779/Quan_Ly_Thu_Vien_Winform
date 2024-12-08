@@ -137,40 +137,23 @@ namespace Quan_Ly_Thu_Vien_Winform
 
         }
 
+
+        // Dùng thời gian
+        // yyyyMMddHHmmssfff - Năm, Tháng, Ngày, Giờ, Phút, Giây, Mili giây
+        // yyyyMMddHHmmss - Năm, Tháng, Ngày, Giờ, Phút, Giây
+
         public static string TaoMaMuon(string maDocGia)
         {
-            return maDocGia + "PM" + demSoPhieuMuon(maDocGia + "PM");
+            var a = DateTime.Now;
+            return "PM-" + maDocGia + "-" + a.Year + a.Month + a.Day + a.Hour + a.Minute + a.Second + a.Millisecond;
         }
 
         public static string TaoMaTra(string maDocGia)
         {
-            return maDocGia + "PT" + demSoPhieuTra(maDocGia + "PT");
+            var a = DateTime.Now;
+            return "PT-" + maDocGia + "-" + a.Year + a.Month + a.Day + a.Hour + a.Minute + a.Second + a.Millisecond;
         }
 
-        static int demSoPhieuMuon(string maPhieuMuon)
-        {
-            int dem = 0;
-            foreach (var item in TruyCap_DuLieu.DanhSach_PhieuMuon)
-            {
-                if (item.Value.MaPhieuMuon.Contains(maPhieuMuon))
-                {
-                    dem++;
-                }
-            }
-            return dem;
-        }
 
-        static int demSoPhieuTra(string maPhieuTra)
-        {
-            int dem = 0;
-            foreach (var item in TruyCap_DuLieu.DanhSach_PhieuTra)
-            {
-                if (item.Value.MaPhieuTra.Contains(maPhieuTra))
-                {
-                    dem++;
-                }
-            }
-            return dem;
-        }
     }
 }

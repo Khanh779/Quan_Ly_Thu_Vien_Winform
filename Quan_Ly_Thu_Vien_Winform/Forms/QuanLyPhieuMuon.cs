@@ -146,5 +146,10 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
             MessageBox.Show("Đã xóa tất cả sách trong phiếu mượn", Application.ProductName + " Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void btn_Del_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
