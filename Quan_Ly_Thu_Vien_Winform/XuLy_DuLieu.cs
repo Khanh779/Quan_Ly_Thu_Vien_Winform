@@ -56,7 +56,6 @@ namespace Quan_Ly_Thu_Vien_Winform
             else
             {
                 Console.WriteLine("File not exist");
-                XuLy_DuLieu.TaoVidu();
             }
         }
 
@@ -129,7 +128,7 @@ namespace Quan_Ly_Thu_Vien_Winform
                 if (!TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.ContainsKey(chiTiet.MaPhieuMuon))
                     TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.Add(chiTiet.MaPhieuMuon, chiTiet);
 
-                if (i % 3 == 0)
+                if (i % 2 == 0)
                 {
                     ThongTin_PhieuTra phieuTra = new ThongTin_PhieuTra();
                     phieuTra.MaPhieuMuon = phieuMuon.MaPhieuMuon;
@@ -140,7 +139,11 @@ namespace Quan_Ly_Thu_Vien_Winform
                         TruyCap_DuLieu.DanhSach_PhieuTra.Add(phieuTra.MaPhieuTra, phieuTra);
 
                     ChiTiet_PhieuTra chiTietPT = new ChiTiet_PhieuTra();
+                    chiTietPT.TinhTrangSauMuon = "Tốt";
                     chiTietPT.MaPhieuTra = phieuTra.MaPhieuTra;
+
+                    if (!TruyCap_DuLieu.DanhSach_ChiTietPhieuTra.ContainsKey(chiTietPT.MaPhieuTra))
+                        TruyCap_DuLieu.DanhSach_ChiTietPhieuTra.Add(chiTietPT.MaPhieuTra, chiTietPT);
                 }
             }
 

@@ -150,12 +150,17 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
         private void btn_Del_Click(object sender, EventArgs e)
         {
             var getMaPM = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-         
+
 
             FormAddReturnBill formAddReturnBill = new FormAddReturnBill();
             formAddReturnBill.SetPreviewBorrowCode(getMaPM);
             formAddReturnBill.MdiParent = MainForm.Instance;
             formAddReturnBill.Show();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LayDanhSachPhieuMuon();
         }
     }
 }

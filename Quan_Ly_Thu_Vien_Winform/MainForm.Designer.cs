@@ -47,6 +47,7 @@
             this.đọcFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ghiFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lịchSửToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createExampleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -152,6 +153,7 @@
             this.quảnLýPhiếuTrảToolStripMenuItem.Name = "quảnLýPhiếuTrảToolStripMenuItem";
             this.quảnLýPhiếuTrảToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.quảnLýPhiếuTrảToolStripMenuItem.Text = "Quản lý phiếu trả";
+            this.quảnLýPhiếuTrảToolStripMenuItem.Click += new System.EventHandler(this.quảnLýPhiếuTrảToolStripMenuItem_Click);
             // 
             // khácToolStripMenuItem
             // 
@@ -159,7 +161,8 @@
             this.thốngKêToolStripMenuItem,
             this.đọcFileToolStripMenuItem,
             this.ghiFileToolStripMenuItem,
-            this.lịchSửToolStripMenuItem});
+            this.lịchSửToolStripMenuItem,
+            this.createExampleToolStripMenuItem});
             this.khácToolStripMenuItem.Name = "khácToolStripMenuItem";
             this.khácToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.khácToolStripMenuItem.Text = "Khác";
@@ -189,6 +192,13 @@
             this.lịchSửToolStripMenuItem.Name = "lịchSửToolStripMenuItem";
             this.lịchSửToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.lịchSửToolStripMenuItem.Text = "Lịch sử";
+            // 
+            // createExampleToolStripMenuItem
+            // 
+            this.createExampleToolStripMenuItem.Name = "createExampleToolStripMenuItem";
+            this.createExampleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.createExampleToolStripMenuItem.Text = "Tạo ví dụ (cẩn thận)";
+            this.createExampleToolStripMenuItem.Click += new System.EventHandler(this.createExampleToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -230,5 +240,6 @@
         private System.Windows.Forms.ToolStripMenuItem đọcFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ghiFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lịchSửToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createExampleToolStripMenuItem;
     }
     }

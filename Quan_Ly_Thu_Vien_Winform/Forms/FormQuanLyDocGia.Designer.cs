@@ -53,6 +53,7 @@
             this.LB_ReaderCount = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_ReaderFilter = new System.Windows.Forms.TextBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +64,9 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
@@ -85,7 +89,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(506, 322);
+            this.dataGridView1.Size = new System.Drawing.Size(506, 297);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             // 
@@ -116,6 +120,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.txt_Email);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txt_NumberPhone);
@@ -129,7 +135,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.groupBox1.Location = new System.Drawing.Point(545, 24);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(246, 325);
+            this.groupBox1.Size = new System.Drawing.Size(246, 329);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin độc giả:";
@@ -236,11 +242,12 @@
             // 
             // btn_Del
             // 
+            this.btn_Del.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Del.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
             this.btn_Del.FlatAppearance.BorderSize = 0;
             this.btn_Del.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Del.ForeColor = System.Drawing.Color.White;
-            this.btn_Del.Location = new System.Drawing.Point(569, 374);
+            this.btn_Del.Location = new System.Drawing.Point(569, 365);
             this.btn_Del.Name = "btn_Del";
             this.btn_Del.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_Del.Size = new System.Drawing.Size(70, 30);
@@ -251,11 +258,12 @@
             // 
             // btn_Add
             // 
+            this.btn_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(133)))), ((int)(((byte)(237)))));
             this.btn_Add.FlatAppearance.BorderSize = 0;
             this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Add.ForeColor = System.Drawing.Color.White;
-            this.btn_Add.Location = new System.Drawing.Point(721, 374);
+            this.btn_Add.Location = new System.Drawing.Point(721, 365);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_Add.Size = new System.Drawing.Size(70, 30);
@@ -266,11 +274,12 @@
             // 
             // btn_Edit
             // 
+            this.btn_Edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Edit.BackColor = System.Drawing.Color.SeaGreen;
             this.btn_Edit.FlatAppearance.BorderSize = 0;
             this.btn_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Edit.ForeColor = System.Drawing.Color.White;
-            this.btn_Edit.Location = new System.Drawing.Point(645, 374);
+            this.btn_Edit.Location = new System.Drawing.Point(645, 365);
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_Edit.Size = new System.Drawing.Size(70, 30);
@@ -281,9 +290,10 @@
             // 
             // LB_ReaderCount
             // 
+            this.LB_ReaderCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LB_ReaderCount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_ReaderCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.LB_ReaderCount.Location = new System.Drawing.Point(18, 383);
+            this.LB_ReaderCount.Location = new System.Drawing.Point(18, 374);
             this.LB_ReaderCount.Name = "LB_ReaderCount";
             this.LB_ReaderCount.Size = new System.Drawing.Size(197, 21);
             this.LB_ReaderCount.TabIndex = 65;
@@ -310,11 +320,25 @@
             this.txt_ReaderFilter.TabIndex = 67;
             this.txt_ReaderFilter.TextChanged += new System.EventHandler(this.txt_ReaderFilter_TextChanged);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(133)))), ((int)(((byte)(237)))));
+            this.linkLabel1.Location = new System.Drawing.Point(286, 20);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(70, 30);
+            this.linkLabel1.TabIndex = 74;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Làm mới";
+            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // FormQuanLyDocGia
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(810, 418);
+            this.ClientSize = new System.Drawing.Size(810, 409);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.txt_ReaderFilter);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.LB_ReaderCount);
@@ -362,5 +386,6 @@
         private System.Windows.Forms.Label LB_ReaderCount;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_ReaderFilter;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

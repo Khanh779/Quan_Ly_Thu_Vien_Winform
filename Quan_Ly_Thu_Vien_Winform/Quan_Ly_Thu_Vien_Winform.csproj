@@ -103,6 +103,12 @@
     <Compile Include="Forms\QuanLyPhieuMuon.Designer.cs">
       <DependentUpon>QuanLyPhieuMuon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\QuanLyPhieuTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QuanLyPhieuTra.Designer.cs">
+      <DependentUpon>QuanLyPhieuTra.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\QuanLyPhieuMuon.resx">
       <DependentUpon>QuanLyPhieuMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QuanLyPhieuTra.resx">
+      <DependentUpon>QuanLyPhieuTra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

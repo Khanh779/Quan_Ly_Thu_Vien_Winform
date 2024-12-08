@@ -115,5 +115,10 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
         {
             LayDanhSach_DocGia();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LayDanhSach_DocGia();
+        }
     }
 }
