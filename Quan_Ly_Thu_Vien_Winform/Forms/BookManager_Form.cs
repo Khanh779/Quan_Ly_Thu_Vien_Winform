@@ -51,5 +51,10 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             addBookForm.MdiParent = MainForm.Instance;
             addBookForm.Show();
         }
+
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            layDanhSach_Sach();
+        }
     }
 }
