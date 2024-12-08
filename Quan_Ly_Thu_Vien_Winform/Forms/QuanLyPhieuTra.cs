@@ -105,16 +105,26 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             chiTiet.MaPhieuTra = phieuTra.MaPhieuTra;
             chiTiet.TinhTrangSauMuon = txt_StatusAfterBorrow.Text;
 
-            if(!XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.ContainsKey(phieuTra.MaPhieuMuon))
+            if (!XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.ContainsKey(phieuTra.MaPhieuMuon))
             {
                 MessageBox.Show("Mã phiếu mượn không tồn tại", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
-            if(XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.ContainsKey(phieuTra.MaPhieuTra))
-            {                                                                                                                                   
+            if (XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.ContainsKey(phieuTra.MaPhieuTra))
+            {
                 MessageBox.Show("Mã phiếu trả đã tồn tại trong danh sách phiếu trả", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
+            }
+
+            foreach (var a in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Values)
+            {
+                if (a.MaPhieuMuon == phieuTra.MaPhieuMuon)
+                {
+                    MessageBox.Show("Phiếu mượn đã được trả, không thể xoá/ trả", Application.ProductName + " Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
             }
 
             if (!XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.ContainsKey(phieuTra.MaPhieuTra))
