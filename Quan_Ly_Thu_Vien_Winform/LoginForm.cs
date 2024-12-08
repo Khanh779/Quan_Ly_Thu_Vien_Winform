@@ -12,7 +12,7 @@ namespace Quan_Ly_Thu_Vien_Winform
 {
     public partial class LoginForm : Form
     {
-        static LoginForm instance=null;
+        static LoginForm instance = null;
         public static LoginForm Instance
         {
             get
@@ -34,17 +34,17 @@ namespace Quan_Ly_Thu_Vien_Winform
 
         private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-          
+
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-         
+            XuLy_DuLieu.DocFile();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(txtUserName.Text!= String.Empty && txtPassword.Text != String.Empty)
+            if (txtUserName.Text != String.Empty && txtPassword.Text != String.Empty)
             {
                 if (txtUserName.Text == "Admin" && txtPassword.Text == "Admin")
                 {
@@ -65,7 +65,7 @@ namespace Quan_Ly_Thu_Vien_Winform
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 this.Close();
         }
 

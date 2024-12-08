@@ -28,7 +28,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             flowLayoutPanel1.Controls.Clear();
             foreach (var item in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach)
             {
-                if (txt_BookCode.Text == String.Empty || item.Key.Contains(txt_BookCode.Text) || item.Value.TenSach.Contains(txt_BookCode.Text))
+                if (txt_BookCode.Text == String.Empty || item.Key.ToLower().Contains(txt_BookCode.Text.ToLower()) || item.Value.TenSach.ToLower().Contains(txt_BookCode.Text.ToLower()))
                 {
                     Controls.BookButton bookButton = new Controls.BookButton();
                     bookButton.BookContent = item.Value.TenSach + "\n(" + item.Value.MaSach + ")";
