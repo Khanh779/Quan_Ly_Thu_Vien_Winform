@@ -33,7 +33,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
         private void txt_BorrowCode_TextChanged(object sender, EventArgs e)
         {
             string maPM = txt_BorrowCode.Text;
-            if(txt_BorrowCode.Text!=String.Empty && txt_BorrowCode.Text.Contains("-"))
+            if (txt_BorrowCode.Text != String.Empty && txt_BorrowCode.Text.Contains("-"))
             {
                 txt_ReturnCode.Text = XuLy_DuLieu.TaoMaTra(maPM.Split('-')[1]);
                 txt_ReaderCode.Text = maPM.Split('-')[1];
@@ -46,7 +46,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                 {
                     dataGridView1.Rows.Add(a.MaSach, a.TenSach, a.TenTacGia, a.LoaiSach, a.NhaXuatBan, a.NamXuatBan);
                 }
-            }    
+            }
 
         }
 
@@ -59,14 +59,10 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                 //XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.Remove(getMaPM);
                 //MessageBox.Show("Đã xoá phiếu mượn", Application.ProductName + " Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                foreach (var a in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Values)
+                if (XuLy_DuLieu.KiemTraPhieuTra_TuMaPhieuMuon(getMaPM))
                 {
-                    if (a.MaPhieuMuon == getMaPM)
-                    {
-                        MessageBox.Show("Phiếu mượn đã được trả, không thể xoá/ trả", Application.ProductName + " Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-
+                    MessageBox.Show("Phiếu mượn đã được trả, không thể xoá/ trả", Application.ProductName + " Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
 
                 ThongTin_PhieuTra phieuTra = new ThongTin_PhieuTra(getMaPM, XuLy_DuLieu.TaoMaTra(getMaPM), "", DateTime.Now);

@@ -35,6 +35,10 @@ namespace Quan_Ly_Thu_Vien_Winform
             return TruyCap_DuLieu.DanhSach_PhieuTra.ContainsKey(maPhieuTra);
         }
 
+        public static bool KiemTraPhieuTra_TuMaPhieuMuon(string maPhieuMuon)
+        {
+            return TruyCap_DuLieu.DanhSach_PhieuTra.Values.ToList().Exists(x => x.MaPhieuMuon == maPhieuMuon);
+        }
 
         public static bool DocFile(string filePath = "DuLieu_LuuTru.dk")
         {
