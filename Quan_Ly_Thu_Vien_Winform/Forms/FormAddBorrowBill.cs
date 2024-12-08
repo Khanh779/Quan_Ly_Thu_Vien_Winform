@@ -122,7 +122,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                 }
 
                 chiTiet.DanhSach_SachMuon.Add(sach.MaSach, sach);
-
+                XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.Add(chiTiet.MaPhieuMuon, chiTiet);
                 MessageBox.Show("Thêm sách " + sach.MaSach + " thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
