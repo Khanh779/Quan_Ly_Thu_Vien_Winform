@@ -90,7 +90,8 @@ namespace Quan_Ly_Thu_Vien_Winform
                 docGia.SoDienThoai = "0123456789";
                 docGia.Email = "docgia" + i + "@gmail.com";
 
-                TruyCap_DuLieu.DanhSach_DocGia.Add(docGia.MaDocGia, docGia);
+                if (!TruyCap_DuLieu.DanhSach_DocGia.ContainsKey(docGia.MaDocGia))
+                    TruyCap_DuLieu.DanhSach_DocGia.Add(docGia.MaDocGia, docGia);
 
             }
 
@@ -104,7 +105,9 @@ namespace Quan_Ly_Thu_Vien_Winform
                 sach.NhaXuatBan = "Nhà xuất bản " + i;
                 sach.NamXuatBan = 2000 + i;
                 sach.LoaiSach = "Loại sách " + i;
-                TruyCap_DuLieu.DanhSach_Sach.Add(sach.MaSach, sach);
+
+                if (!TruyCap_DuLieu.DanhSach_Sach.ContainsKey(sach.MaSach))
+                    TruyCap_DuLieu.DanhSach_Sach.Add(sach.MaSach, sach);
             }
 
             // Thêm 40 phiếu mượn
@@ -118,10 +121,13 @@ namespace Quan_Ly_Thu_Vien_Winform
                 TruyCap_DuLieu.DanhSach_PhieuMuon.Add(phieuMuon.MaPhieuMuon, phieuMuon);
 
                 ChiTiet_PhieuMuon chiTiet = new ChiTiet_PhieuMuon();
+                chiTiet.TinhTrangTruocKhiMuon = "Tốt";
                 chiTiet.MaPhieuMuon = phieuMuon.MaPhieuMuon;
                 if (i % 2 == 0)
                     chiTiet.DanhSach_SachMuon.Add("S" + i, TruyCap_DuLieu.DanhSach_Sach["S" + i]);
-                TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.Add(chiTiet.MaPhieuMuon, chiTiet);
+
+                if (!TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.ContainsKey(chiTiet.MaPhieuMuon))
+                    TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.Add(chiTiet.MaPhieuMuon, chiTiet);
 
                 if (i % 3 == 0)
                 {
@@ -129,7 +135,9 @@ namespace Quan_Ly_Thu_Vien_Winform
                     phieuTra.MaPhieuMuon = phieuMuon.MaPhieuMuon;
                     phieuTra.MaPhieuTra = phieuTra.MaPhieuMuon.Replace("PM", "PT");
                     phieuTra.NgayTra = DateTime.Now;
-                    TruyCap_DuLieu.DanhSach_PhieuTra.Add(phieuTra.MaPhieuTra, phieuTra);
+
+                    if (!TruyCap_DuLieu.DanhSach_PhieuTra.ContainsKey(phieuTra.MaPhieuTra))
+                        TruyCap_DuLieu.DanhSach_PhieuTra.Add(phieuTra.MaPhieuTra, phieuTra);
 
                     ChiTiet_PhieuTra chiTietPT = new ChiTiet_PhieuTra();
                     chiTietPT.MaPhieuTra = phieuTra.MaPhieuTra;
