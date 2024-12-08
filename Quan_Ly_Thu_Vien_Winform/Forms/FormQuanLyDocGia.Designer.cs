@@ -1,6 +1,6 @@
 ﻿namespace Quan_Ly_Thu_Vien_Winform.Forms
 {
-    partial class ReaderManager_Form
+    partial class FormQuanLyDocGia
     {
         /// <summary>
         /// Required designer variable.

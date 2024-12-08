@@ -1,6 +1,6 @@
 ﻿namespace Quan_Ly_Thu_Vien_Winform .Forms
 {
-    partial class ViewBookForm
+    partial class FormThemSach
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txt_Publisher = new System.Windows.Forms.TextBox();
             this.txt_BookType = new System.Windows.Forms.TextBox();
             this.txt_PublishYear = new System.Windows.Forms.TextBox();
@@ -65,12 +64,10 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(538, 344);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.button2.Enabled = false;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
@@ -81,7 +78,6 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Xoá";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -100,7 +96,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.txt_Publisher);
             this.groupBox1.Controls.Add(this.txt_BookType);
             this.groupBox1.Controls.Add(this.txt_PublishYear);
@@ -121,22 +116,10 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin";
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(24, 244);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(143, 21);
-            this.checkBox1.TabIndex = 59;
-            this.checkBox1.Text = "Cho phép chỉnh sửa";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
             // txt_Publisher
             // 
             this.txt_Publisher.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.txt_Publisher.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Publisher.Enabled = false;
             this.txt_Publisher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_Publisher.Location = new System.Drawing.Point(154, 206);
             this.txt_Publisher.Name = "txt_Publisher";
@@ -147,7 +130,6 @@
             // 
             this.txt_BookType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.txt_BookType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_BookType.Enabled = false;
             this.txt_BookType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_BookType.Location = new System.Drawing.Point(154, 173);
             this.txt_BookType.Name = "txt_BookType";
@@ -158,7 +140,6 @@
             // 
             this.txt_PublishYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.txt_PublishYear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_PublishYear.Enabled = false;
             this.txt_PublishYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_PublishYear.Location = new System.Drawing.Point(154, 139);
             this.txt_PublishYear.Name = "txt_PublishYear";
@@ -169,7 +150,6 @@
             // 
             this.txt_AuthName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.txt_AuthName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_AuthName.Enabled = false;
             this.txt_AuthName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_AuthName.Location = new System.Drawing.Point(154, 105);
             this.txt_AuthName.Name = "txt_AuthName";
@@ -180,7 +160,6 @@
             // 
             this.txt_BookName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.txt_BookName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_BookName.Enabled = false;
             this.txt_BookName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_BookName.Location = new System.Drawing.Point(154, 72);
             this.txt_BookName.Name = "txt_BookName";
@@ -191,7 +170,6 @@
             // 
             this.txt_BookCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.txt_BookCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_BookCode.Enabled = false;
             this.txt_BookCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_BookCode.Location = new System.Drawing.Point(154, 36);
             this.txt_BookCode.Name = "txt_BookCode";
@@ -200,7 +178,6 @@
             // 
             // label5
             // 
-            this.label5.Enabled = false;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label5.Location = new System.Drawing.Point(20, 171);
@@ -212,7 +189,6 @@
             // 
             // label4
             // 
-            this.label4.Enabled = false;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label4.Location = new System.Drawing.Point(20, 204);
@@ -224,7 +200,6 @@
             // 
             // label1
             // 
-            this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(20, 137);
@@ -236,7 +211,6 @@
             // 
             // LB_AuthName
             // 
-            this.LB_AuthName.Enabled = false;
             this.LB_AuthName.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.LB_AuthName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.LB_AuthName.Location = new System.Drawing.Point(20, 103);
@@ -259,7 +233,6 @@
             // 
             // LB_BookName
             // 
-            this.LB_BookName.Enabled = false;
             this.LB_BookName.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.LB_BookName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.LB_BookName.Location = new System.Drawing.Point(20, 70);
@@ -272,7 +245,6 @@
             // btnBrowse
             // 
             this.btnBrowse.BackColor = System.Drawing.Color.Gray;
-            this.btnBrowse.Enabled = false;
             this.btnBrowse.FlatAppearance.BorderSize = 0;
             this.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBrowse.ForeColor = System.Drawing.Color.White;
@@ -295,7 +267,7 @@
             this.PB_Book.TabIndex = 0;
             this.PB_Book.TabStop = false;
             // 
-            // ViewBookForm
+            // AddBookForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -305,7 +277,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ViewBookForm";
+            this.Name = "AddBookForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm sách";
             this.Load += new System.EventHandler(this.ViewBookForm_Load);
@@ -337,6 +309,5 @@
         private System.Windows.Forms.TextBox txt_AuthName;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

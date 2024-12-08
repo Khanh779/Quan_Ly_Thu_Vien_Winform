@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Quan_Ly_Thu_Vien_Winform.Forms
 {
-    public partial class AddBookForm : Form
+    public partial class FormThemSach : Form
     {
-        public AddBookForm()
+        public FormThemSach()
         {
             InitializeComponent();
 
@@ -22,12 +22,13 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
         int saveMode = 0;
 
-        public AddBookForm(ChiTiet_PhieuMuon chiTiet_PhieuMuon)
+        public FormThemSach(ChiTiet_PhieuMuon chiTiet_PhieuMuon)
         {
             InitializeComponent();
             saveMode = 1;
             txt_BookCode.AutoCompleteCustomSource.AddRange(XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach.Keys.ToArray());
             txt_BookCode.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txt_BookCode.AutoCompleteSource = AutoCompleteSource.CustomSource;
 
             txt_BookCode.Enabled = false;
             chiTietPM = chiTiet_PhieuMuon;

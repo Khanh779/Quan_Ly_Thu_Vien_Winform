@@ -1,6 +1,6 @@
 ﻿namespace Quan_Ly_Thu_Vien_Winform.Forms
 {
-    partial class AddReader_Form
+    partial class FormThemDocGia
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddReader_Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormThemDocGia));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_Email = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();

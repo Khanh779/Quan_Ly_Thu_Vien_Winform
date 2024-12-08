@@ -111,36 +111,40 @@ namespace Quan_Ly_Thu_Vien_Winform
             {
                 ThongTin_PhieuMuon phieuMuon = new ThongTin_PhieuMuon();
                 phieuMuon.MaDocGia = "DG" + i;
-                phieuMuon.MaPhieuMuon = phieuMuon.MaDocGia + "PM" + demSoPhieuMuon(phieuMuon.MaDocGia + "PM");
+                phieuMuon.MaPhieuMuon = TaoMaMuon(phieuMuon.MaDocGia);
                 phieuMuon.NgayMuon = DateTime.Now;
+                phieuMuon.NgayHenTra = DateTime.Now.AddDays(7);
                 TruyCap_DuLieu.DanhSach_PhieuMuon.Add(phieuMuon.MaPhieuMuon, phieuMuon);
-                // Thêm 5 chi tiết phi
+
+                ChiTiet_PhieuMuon chiTiet = new ChiTiet_PhieuMuon();
+                chiTiet.MaPhieuMuon = phieuMuon.MaPhieuMuon;
                 if (i % 2 == 0)
-                {
-                    ChiTiet_PhieuMuon chiTiet = new ChiTiet_PhieuMuon();
-                    chiTiet.MaPhieuMuon = phieuMuon.MaPhieuMuon;
                     chiTiet.DanhSach_SachMuon.Add("S" + i, TruyCap_DuLieu.DanhSach_Sach["S" + i]);
-                    TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.Add(chiTiet.MaPhieuMuon, chiTiet);
+                TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.Add(chiTiet.MaPhieuMuon, chiTiet);
+
+                if (i % 3 == 0)
+                {
+                    ThongTin_PhieuTra phieuTra = new ThongTin_PhieuTra();
+                    phieuTra.MaPhieuMuon = phieuMuon.MaPhieuMuon;
+                    phieuTra.MaPhieuTra = phieuTra.MaPhieuMuon.Replace("PM", "PT");
+                    phieuTra.NgayTra = DateTime.Now;
+                    TruyCap_DuLieu.DanhSach_PhieuTra.Add(phieuTra.MaPhieuTra, phieuTra);
+
+                    ChiTiet_PhieuTra chiTietPT = new ChiTiet_PhieuTra();
+                    chiTietPT.MaPhieuTra = phieuTra.MaPhieuTra;
                 }
             }
 
-            // Thêm 30 phiếu trả
-            for (int i = 0; i < 30; i++)
-            {
-                ThongTin_PhieuTra phieuTra = new ThongTin_PhieuTra();
-                phieuTra.MaPhieuMuon = "DG" + i + "PM";
-                phieuTra.MaPhieuTra = phieuTra.MaPhieuMuon.Replace("PM", "PT") + demSoPhieuTra(phieuTra.MaPhieuMuon.Replace("PM", "PT"));
-                phieuTra.NgayTra = DateTime.Now;
-                TruyCap_DuLieu.DanhSach_PhieuTra.Add(phieuTra.MaPhieuTra, phieuTra);
-                // Thêm 5 chi tiết phi
+        }
 
-                if (i % 2 == 0)
-                {
-                    ChiTiet_PhieuMuon chiTiet = new ChiTiet_PhieuMuon();
-                    chiTiet.MaPhieuMuon = phieuTra.MaPhieuMuon;
-                    chiTiet.DanhSach_SachMuon.Add("S" + i, TruyCap_DuLieu.DanhSach_Sach["S" + i]);
-                }
-            }
+        public static string TaoMaMuon(string maDocGia)
+        {
+            return maDocGia + "PM" + demSoPhieuMuon(maDocGia + "PM");
+        }
+
+        public static string TaoMaTra(string maDocGia)
+        {
+            return maDocGia + "PT" + demSoPhieuTra(maDocGia + "PT");
         }
 
         static int demSoPhieuMuon(string maPhieuMuon)

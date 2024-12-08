@@ -39,14 +39,14 @@ namespace Quan_Ly_Thu_Vien_Winform
 
         private void viewBooksToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BookManager_Form bookManager_Form = new BookManager_Form();
+            FormQuanLySach bookManager_Form = new FormQuanLySach();
             bookManager_Form.MdiParent = this;
             bookManager_Form.Show();
         }
 
         private void addBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddBookForm addBookForm = new AddBookForm();
+            FormThemSach addBookForm = new FormThemSach();
             addBookForm.MdiParent = this;
             addBookForm.Show();
         }
@@ -66,17 +66,24 @@ namespace Quan_Ly_Thu_Vien_Winform
 
         private void readersManagerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReaderManager_Form readerManager_Form = new ReaderManager_Form();
+            FormQuanLyDocGia readerManager_Form = new FormQuanLyDocGia();
             readerManager_Form.MdiParent = this;
             readerManager_Form.Show();
         }
 
         private void addReaderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddReader_Form addReader_Form = new AddReader_Form();
+            FormThemDocGia addReader_Form = new FormThemDocGia();
             addReader_Form.MdiParent = this;
             addReader_Form.Show();
 
+        }
+
+        private void quảnLýPhiếuMượnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuanLyPhieuMuon quanLyPhieuMuon = new QuanLyPhieuMuon();
+            quanLyPhieuMuon.MdiParent = this;
+            quanLyPhieuMuon.Show();
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Quan_Ly_Thu_Vien_Winform.Forms
 {
-    public partial class BookManager_Form : Form
+    public partial class FormQuanLySach : Form
     {
-        public BookManager_Form()
+        public FormQuanLySach()
         {
             InitializeComponent();
         }
@@ -37,7 +37,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
                     bookButton.Click += (s, ev) =>
                     {
-                        ViewBookForm bookDetail_Form = new ViewBookForm(item.Value);
+                        FormXemSach bookDetail_Form = new FormXemSach(item.Value);
                         bookDetail_Form.MdiParent = MainForm.Instance;
                         bookDetail_Form.Show();
                     };
@@ -50,7 +50,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AddBookForm addBookForm = new AddBookForm();
+            FormThemSach addBookForm = new FormThemSach();
             addBookForm.MdiParent = MainForm.Instance;
             addBookForm.Show();
         }

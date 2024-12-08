@@ -1,6 +1,6 @@
 ﻿namespace Quan_Ly_Thu_Vien_Winform.Forms
 {
-    partial class BookManager_Form
+    partial class FormQuanLySach
     {
         /// <summary>
         /// Required designer variable.

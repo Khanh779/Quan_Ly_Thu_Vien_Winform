@@ -58,35 +58,41 @@
     <Compile Include="DuLieu\ThongTin_PhieuMuon.cs" />
     <Compile Include="DuLieu\ThongTin_PhieuTra.cs" />
     <Compile Include="DuLieu\ThongTin_Sach.cs" />
-    <Compile Include="Forms\AddBookForm.cs">
+    <Compile Include="Forms\FormThemSach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AddBookForm.Designer.cs">
-      <DependentUpon>AddBookForm.cs</DependentUpon>
+    <Compile Include="Forms\FormThemSach.Designer.cs">
+      <DependentUpon>FormThemSach.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\AddReader_Form.cs">
+    <Compile Include="Forms\FormThemDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AddReader_Form.Designer.cs">
-      <DependentUpon>AddReader_Form.cs</DependentUpon>
+    <Compile Include="Forms\FormThemDocGia.Designer.cs">
+      <DependentUpon>FormThemDocGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\BookManager_Form.cs">
+    <Compile Include="Forms\FormQuanLySach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\BookManager_Form.Designer.cs">
-      <DependentUpon>BookManager_Form.cs</DependentUpon>
+    <Compile Include="Forms\FormQuanLySach.Designer.cs">
+      <DependentUpon>FormQuanLySach.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ReaderManager_Form.cs">
+    <Compile Include="Forms\FormQuanLyDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ReaderManager_Form.Designer.cs">
-      <DependentUpon>ReaderManager_Form.cs</DependentUpon>
+    <Compile Include="Forms\FormQuanLyDocGia.Designer.cs">
+      <DependentUpon>FormQuanLyDocGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ViewBookForm.cs">
+    <Compile Include="Forms\FormXemSach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ViewBookForm.Designer.cs">
-      <DependentUpon>ViewBookForm.cs</DependentUpon>
+    <Compile Include="Forms\FormXemSach.Designer.cs">
+      <DependentUpon>FormXemSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QuanLyPhieuMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QuanLyPhieuMuon.Designer.cs">
+      <DependentUpon>QuanLyPhieuMuon.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -107,20 +113,23 @@
     <EmbeddedResource Include="Controls\BookButton.resx">
       <DependentUpon>BookButton.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AddBookForm.resx">
-      <DependentUpon>AddBookForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormThemSach.resx">
+      <DependentUpon>FormThemSach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AddReader_Form.resx">
-      <DependentUpon>AddReader_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormThemDocGia.resx">
+      <DependentUpon>FormThemDocGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\BookManager_Form.resx">
-      <DependentUpon>BookManager_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormQuanLySach.resx">
+      <DependentUpon>FormQuanLySach.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ReaderManager_Form.resx">
-      <DependentUpon>ReaderManager_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormQuanLyDocGia.resx">
+      <DependentUpon>FormQuanLyDocGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ViewBookForm.resx">
-      <DependentUpon>ViewBookForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormXemSach.resx">
+      <DependentUpon>FormXemSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QuanLyPhieuMuon.resx">
+      <DependentUpon>QuanLyPhieuMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

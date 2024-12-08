@@ -11,16 +11,16 @@ using System.Windows.Forms;
 
 namespace Quan_Ly_Thu_Vien_Winform.Forms
 {
-    public partial class ViewBookForm : Form
+    public partial class FormXemSach : Form
     {
-        public ViewBookForm()
+        public FormXemSach()
         {
             InitializeComponent();
         }
 
         int saveMode = 0;
 
-        public ViewBookForm(ThongTin_Sach thongTin_Sach)
+        public FormXemSach(ThongTin_Sach thongTin_Sach)
         {
             InitializeComponent();
             saveMode = 1;
@@ -95,7 +95,12 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach.Remove(thongTin_Sach.MaSach);
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa sách " + thongTin_Sach.MaSach + " này không?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach.Remove(thongTin_Sach.MaSach);
+                MessageBox.Show("Xóa sách thành công");
+                Close();
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

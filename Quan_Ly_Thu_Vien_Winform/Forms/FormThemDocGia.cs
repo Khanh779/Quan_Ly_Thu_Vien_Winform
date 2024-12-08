@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Quan_Ly_Thu_Vien_Winform.Forms
 {
-    public partial class AddReader_Form : Form
+    public partial class FormThemDocGia : Form
     {
-        public AddReader_Form()
+        public FormThemDocGia()
         {
             InitializeComponent();
         }
