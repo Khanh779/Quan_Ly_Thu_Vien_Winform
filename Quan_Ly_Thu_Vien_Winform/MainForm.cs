@@ -54,15 +54,29 @@ namespace Quan_Ly_Thu_Vien_Winform
 
         private void đọcFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            XuLy_DuLieu.DocFile();
-            MessageBox.Show("Đọc file thành công");
+            if (XuLy_DuLieu.DocFile() == true)
+            {
+                MessageBox.Show("Đọc file thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Đọc file thất bại", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
 
         }
 
         private void ghiFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            XuLy_DuLieu.GhiFile();
-            MessageBox.Show("Ghi file thành công");
+            if (XuLy_DuLieu.GhiFile() == true)
+            {
+                MessageBox.Show("Ghi file thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Ghi file thất bại", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         private void readersManagerToolStripMenuItem_Click(object sender, EventArgs e)
