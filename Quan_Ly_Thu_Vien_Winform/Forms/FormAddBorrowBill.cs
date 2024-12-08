@@ -114,6 +114,13 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             if (txt_BookCode.Text != String.Empty || XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach.ContainsKey(txt_BookCode.Text))
             {
                 ThongTin_Sach sach = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach[txt_BookCode.Text];
+
+                if (chiTiet.DanhSach_SachMuon.ContainsKey(sach.MaSach))
+                {
+                    MessageBox.Show("Sách đã tồn tại", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 chiTiet.DanhSach_SachMuon.Add(sach.MaSach, sach);
 
                 MessageBox.Show("Thêm sách " + sach.MaSach + " thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
