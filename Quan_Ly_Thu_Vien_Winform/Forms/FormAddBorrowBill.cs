@@ -38,11 +38,11 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             if (txt_ReaderID.Text != String.Empty)
             {
                 txt_BorrowCode.Text = XuLy_DuLieu.TaoMaMuon(maPM);
-                if(XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia.ContainsKey(txt_ReaderID.Text))
+                if (XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia.ContainsKey(txt_ReaderID.Text))
                 {
                     txt_ReaderName.Text = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia[maPM].HoTen;
 
-                }    
+                }
 
             }
 
@@ -101,11 +101,28 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
         {
             chiTiet.DanhSach_SachMuon.Clear();
             dataGridView1.Rows.Clear();
+            hienThi();
         }
 
         private void txt_BookCode_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ThongTin_Sach sach = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach[txt_BookCode.Text];
+            chiTiet.DanhSach_SachMuon.Add(sach.MaSach, sach);
+            hienThi();
+        }
+
+        void hienThi()
+        {
+            dataGridView1.Rows.Clear();
+            foreach (var item in chiTiet.DanhSach_SachMuon)
+            {
+                dataGridView1.Rows.Add(item.Value.MaSach, item.Value.TenSach, item.Value.TenTacGia, item.Value.NhaXuatBan, item.Value.NamXuatBan, item.Value.LoaiSach);
+            }
         }
     }
 }
