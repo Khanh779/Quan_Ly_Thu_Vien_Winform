@@ -146,14 +146,14 @@
             // thêmPhiếuTrảToolStripMenuItem
             // 
             this.thêmPhiếuTrảToolStripMenuItem.Name = "thêmPhiếuTrảToolStripMenuItem";
-            this.thêmPhiếuTrảToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.thêmPhiếuTrảToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.thêmPhiếuTrảToolStripMenuItem.Text = "Thêm phiếu trả";
             this.thêmPhiếuTrảToolStripMenuItem.Click += new System.EventHandler(this.thêmPhiếuTrảToolStripMenuItem_Click);
             // 
             // quảnLýPhiếuTrảToolStripMenuItem
             // 
             this.quảnLýPhiếuTrảToolStripMenuItem.Name = "quảnLýPhiếuTrảToolStripMenuItem";
-            this.quảnLýPhiếuTrảToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quảnLýPhiếuTrảToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.quảnLýPhiếuTrảToolStripMenuItem.Text = "Quản lý phiếu trả";
             this.quảnLýPhiếuTrảToolStripMenuItem.Click += new System.EventHandler(this.quảnLýPhiếuTrảToolStripMenuItem_Click);
             // 
