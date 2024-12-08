@@ -30,6 +30,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             txt_Publisher.Text = thongTin_Sach.NhaXuatBan;
             txt_PublishYear.Text = thongTin_Sach.NamXuatBan.ToString();
             txt_BookType.Text = thongTin_Sach.LoaiSach;
+            PB_Book.Image = thongTin_Sach.HinhAnh == null ? Properties.Resources.icons8_open_book_100__1_ : thongTin_Sach.HinhAnh;
 
             txt_BookCode.Enabled = false;
 
@@ -45,10 +46,14 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
+            if (checkBox1.Checked == true)
+            {
+                MessageBox.Show("Chế độ chỉnh sửa được bật");
+            }
             btnBrowse.Enabled = txt_BookName.Enabled = txt_BookCode.Enabled = txt_AuthName.Enabled = txt_Publisher.Enabled =
-                txt_PublishYear.Enabled = txt_BookType.Enabled
-                = button2.Enabled = button1.Enabled
-                = checkBox1.Checked;
+              txt_PublishYear.Enabled = txt_BookType.Enabled
+              = button2.Enabled = button1.Enabled
+              = checkBox1.Checked;
         }
 
         Bitmap LayHinhSach()

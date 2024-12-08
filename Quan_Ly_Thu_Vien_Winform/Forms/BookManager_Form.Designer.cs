@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.bookButton1 = new Quan_Ly_Thu_Vien_Winform.Controls.BookButton();
             this.bookButton2 = new Quan_Ly_Thu_Vien_Winform.Controls.BookButton();
             this.bookButton3 = new Quan_Ly_Thu_Vien_Winform.Controls.BookButton();
@@ -39,7 +37,11 @@
             this.bookButton6 = new Quan_Ly_Thu_Vien_Winform.Controls.BookButton();
             this.bookButton7 = new Quan_Ly_Thu_Vien_Winform.Controls.BookButton();
             this.bookButton8 = new Quan_Ly_Thu_Vien_Winform.Controls.BookButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnBrowse = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_BookCode = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +51,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanel1.Controls.Add(this.bookButton1);
             this.flowLayoutPanel1.Controls.Add(this.bookButton2);
             this.flowLayoutPanel1.Controls.Add(this.bookButton3);
@@ -57,37 +60,10 @@
             this.flowLayoutPanel1.Controls.Add(this.bookButton6);
             this.flowLayoutPanel1.Controls.Add(this.bookButton7);
             this.flowLayoutPanel1.Controls.Add(this.bookButton8);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(26, 33);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(26, 59);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(763, 418);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(763, 392);
             this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(22, 460);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(325, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Tổng số sách: 0";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(133)))), ((int)(((byte)(237)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(705, 461);
-            this.button1.Name = "button1";
-            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button1.Size = new System.Drawing.Size(84, 30);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // bookButton1
             // 
@@ -185,8 +161,37 @@
             this.bookButton8.Size = new System.Drawing.Size(180, 180);
             this.bookButton8.TabIndex = 7;
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(22, 460);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(325, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Tổng số sách: 0";
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(133)))), ((int)(((byte)(237)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(705, 461);
+            this.button1.Name = "button1";
+            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button1.Size = new System.Drawing.Size(84, 30);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Thêm";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnBrowse
             // 
+            this.btnBrowse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBrowse.BackColor = System.Drawing.Color.Gray;
             this.btnBrowse.FlatAppearance.BorderSize = 0;
             this.btnBrowse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -200,11 +205,34 @@
             this.btnBrowse.UseVisualStyleBackColor = false;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(26, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 25);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Tìm kiếm theo:";
+            // 
+            // txt_BookCode
+            // 
+            this.txt_BookCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
+            this.txt_BookCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_BookCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_BookCode.Location = new System.Drawing.Point(154, 21);
+            this.txt_BookCode.Name = "txt_BookCode";
+            this.txt_BookCode.Size = new System.Drawing.Size(210, 25);
+            this.txt_BookCode.TabIndex = 54;
+            this.txt_BookCode.TextChanged += new System.EventHandler(this.txt_BookCode_TextChanged);
+            // 
             // BookManager_Form
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(801, 503);
+            this.Controls.Add(this.txt_BookCode);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
@@ -215,6 +243,7 @@
             this.Load += new System.EventHandler(this.BookManager_Form_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -232,5 +261,7 @@
         private Controls.BookButton bookButton8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnBrowse;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txt_BookCode;
     }
 }

@@ -34,13 +34,12 @@ namespace Quan_Ly_Thu_Vien_Winform
 
         private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            XuLy_DuLieu.GhiFile();
+          
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-           XuLy_DuLieu.DocFile();
-
+         
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -28,21 +28,24 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             flowLayoutPanel1.Controls.Clear();
             foreach (var item in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach)
             {
-                Controls.BookButton bookButton = new Controls.BookButton();
-                bookButton.BookContent = item.Value.TenSach + "\n(" + item.Value.MaSach + ")";
-                bookButton.BookBitmap = item.Value.HinhAnh;
-                bookButton.Size = new Size(180, 180);
-
-                bookButton.Click += (s, ev) =>
+                if (txt_BookCode.Text == String.Empty || item.Key.Contains(txt_BookCode.Text) || item.Value.TenSach.Contains(txt_BookCode.Text))
                 {
-                    ViewBookForm bookDetail_Form = new ViewBookForm(item.Value);
-                    bookDetail_Form.MdiParent = MainForm.Instance;
-                    bookDetail_Form.Show();
-                };
+                    Controls.BookButton bookButton = new Controls.BookButton();
+                    bookButton.BookContent = item.Value.TenSach + "\n(" + item.Value.MaSach + ")";
+                    bookButton.BookBitmap = item.Value.HinhAnh;
+                    bookButton.Size = new Size(180, 180);
 
-                flowLayoutPanel1.Controls.Add(bookButton);
+                    bookButton.Click += (s, ev) =>
+                    {
+                        ViewBookForm bookDetail_Form = new ViewBookForm(item.Value);
+                        bookDetail_Form.MdiParent = MainForm.Instance;
+                        bookDetail_Form.Show();
+                    };
+
+                    flowLayoutPanel1.Controls.Add(bookButton);
+                }
             }
-            label1.Text = "Tổng số sách: " + XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach.Count;
+            label1.Text = "Tổng số sách: " + flowLayoutPanel1.Controls.Count;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -53,6 +56,11 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
         }
 
         private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            layDanhSach_Sach();
+        }
+
+        private void txt_BookCode_TextChanged(object sender, EventArgs e)
         {
             layDanhSach_Sach();
         }

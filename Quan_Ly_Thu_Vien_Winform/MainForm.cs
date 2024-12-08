@@ -50,5 +50,18 @@ namespace Quan_Ly_Thu_Vien_Winform
             addBookForm.MdiParent = this;
             addBookForm.Show();
         }
+
+        private void đọcFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            XuLy_DuLieu.DocFile();
+            MessageBox.Show("Đọc file thành công");
+
+        }
+
+        private void ghiFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            XuLy_DuLieu.GhiFile();
+            MessageBox.Show("Ghi file thành công");
+        }
     }
 }
