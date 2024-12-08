@@ -97,14 +97,16 @@
             // addReaderToolStripMenuItem
             // 
             this.addReaderToolStripMenuItem.Name = "addReaderToolStripMenuItem";
-            this.addReaderToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.addReaderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addReaderToolStripMenuItem.Text = "Thêm độc giả";
+            this.addReaderToolStripMenuItem.Click += new System.EventHandler(this.addReaderToolStripMenuItem_Click);
             // 
             // readersManagerToolStripMenuItem
             // 
             this.readersManagerToolStripMenuItem.Name = "readersManagerToolStripMenuItem";
-            this.readersManagerToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.readersManagerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.readersManagerToolStripMenuItem.Text = "Quản lý độc giả";
+            this.readersManagerToolStripMenuItem.Click += new System.EventHandler(this.readersManagerToolStripMenuItem_Click);
             // 
             // phiếuMượnToolStripMenuItem
             // 

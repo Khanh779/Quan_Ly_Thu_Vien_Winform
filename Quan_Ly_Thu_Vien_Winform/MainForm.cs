@@ -63,5 +63,20 @@ namespace Quan_Ly_Thu_Vien_Winform
             XuLy_DuLieu.GhiFile();
             MessageBox.Show("Ghi file thành công");
         }
+
+        private void readersManagerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReaderManager_Form readerManager_Form = new ReaderManager_Form();
+            readerManager_Form.MdiParent = this;
+            readerManager_Form.Show();
+        }
+
+        private void addReaderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddReader_Form addReader_Form = new AddReader_Form();
+            addReader_Form.MdiParent = this;
+            addReader_Form.Show();
+
+        }
     }
 }

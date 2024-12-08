@@ -102,6 +102,14 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             }
 
             //DialogResult = DialogResult.OK;
+            if (MessageBox.Show("Bạn có muốn tiếp tục?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+
+            }
+            else
+            {
+                this.Close();
+            }
         }
 
         private void btnBrowse_Click(object sender, EventArgs e)
