@@ -12,8 +12,9 @@ namespace Quan_Ly_Thu_Vien_Winform.DuLieu
         {
             get
             {
-                var a = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.Values.ToList().Find(x => x.MaPhieuMuon.Replace("PM", "PT") == MaPhieuTra).DanhSach_SachMuon;
-                return a != null ? a : new Dictionary<string, ThongTin_Sach>();
+                var a = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.FirstOrDefault(x => x.Value.MaPhieuTra == MaPhieuTra).Value.MaPhieuMuon;
+                var b = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.FirstOrDefault(x => x.Value.MaPhieuMuon == a).Value.DanhSach_SachMuon;
+                return a != null ? b : new Dictionary<string, ThongTin_Sach>();
             }
         }
 
