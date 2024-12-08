@@ -37,6 +37,14 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             txt_ReaderCode.Text = maPM.Split('-')[1];
 
             dateTimePicker1.Value = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.ContainsKey(maPM) ? XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon[maPM].NgayMuon : DateTime.Now;
+
+            dataGridView1.Rows.Clear();
+
+            foreach (var a in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon[maPM].DanhSach_SachMuon.Values)
+            {
+                dataGridView1.Rows.Add(a.MaSach, a.TenSach, a.TenTacGia, a.LoaiSach, a.NhaXuatBan, a.NamXuatBan);
+            }
+
         }
 
         private void btn_Add_Click(object sender, EventArgs e)

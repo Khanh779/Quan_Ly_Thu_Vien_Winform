@@ -103,6 +103,7 @@ namespace Quan_Ly_Thu_Vien_Winform
                 sach.TenTacGia = "Tác giả " + i;
                 sach.NhaXuatBan = "Nhà xuất bản " + i;
                 sach.NamXuatBan = 2000 + i;
+                sach.LoaiSach = "Loại sách " + i;
                 TruyCap_DuLieu.DanhSach_Sach.Add(sach.MaSach, sach);
             }
 
