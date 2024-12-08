@@ -81,7 +81,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             chiTiet.TinhTrangTruocKhiMuon = txt_StatusBeforeBorrow.Text;
 
             XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.Add(phieuMuon.MaPhieuMuon, phieuMuon);
-
+            XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.Add(chiTiet.MaPhieuMuon, chiTiet);
             MessageBox.Show("Thêm phiếu mượn thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             if (MessageBox.Show("Bạn có muốn tiếp tục?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -111,7 +111,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (txt_BookCode.Text != String.Empty || XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach.ContainsKey(txt_BookCode.Text))
+            if (txt_BookCode.Text != String.Empty && XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach.ContainsKey(txt_BookCode.Text))
             {
                 ThongTin_Sach sach = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach[txt_BookCode.Text];
 
@@ -122,7 +122,6 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                 }
 
                 chiTiet.DanhSach_SachMuon.Add(sach.MaSach, sach);
-                XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.Add(chiTiet.MaPhieuMuon, chiTiet);
                 MessageBox.Show("Thêm sách " + sach.MaSach + " thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
