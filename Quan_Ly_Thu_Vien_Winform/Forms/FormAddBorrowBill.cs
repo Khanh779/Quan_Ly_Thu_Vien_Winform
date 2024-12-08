@@ -38,7 +38,11 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             if (txt_ReaderID.Text != String.Empty)
             {
                 txt_BorrowCode.Text = XuLy_DuLieu.TaoMaMuon(maPM);
+                if(XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia.ContainsKey(txt_ReaderID.Text))
+                {
+                    txt_ReaderName.Text = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia[maPM].HoTen;
 
+                }    
 
             }
 
