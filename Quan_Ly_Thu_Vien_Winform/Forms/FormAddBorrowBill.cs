@@ -118,6 +118,10 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
                 MessageBox.Show("Thêm sách " + sach.MaSach + " thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else
+            {
+                MessageBox.Show("Textbox trống hoặc mã sách không tồn tại", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             hienThi();
         }
 
