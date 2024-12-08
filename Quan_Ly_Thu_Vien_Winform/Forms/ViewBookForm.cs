@@ -76,6 +76,11 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
         {
             if (saveMode == 1)
             {
+                if (!int.TryParse(txt_PublishYear.Text, out int publishYear))
+                {
+                    MessageBox.Show("Năm xuất bản phải là số", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 ThongTin_Sach sach = new ThongTin_Sach(txt_BookCode.Text, txt_BookName.Text, txt_AuthName.Text, txt_BookType.Text, txt_Publisher.Text, int.Parse(txt_PublishYear.Text), (Bitmap)PB_Book.Image);
                 thongTin_Sach = sach;
                 MessageBox.Show("Cập nhật thành công");

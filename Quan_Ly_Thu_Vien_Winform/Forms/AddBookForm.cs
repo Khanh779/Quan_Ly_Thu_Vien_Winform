@@ -17,7 +17,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
         {
             InitializeComponent();
 
-      
+
         }
 
         int saveMode = 0;
@@ -61,6 +61,21 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            // Kiểm tra thông tin nhập vào có đủ hay chưa
+            if (txt_BookCode.Text == String.Empty || txt_BookName.Text == String.Empty || txt_AuthName.Text == String.Empty || txt_BookType.Text == String.Empty || txt_Publisher.Text == String.Empty || txt_PublishYear.Text == String.Empty)
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!int.TryParse(txt_PublishYear.Text, out int publishYear))
+            {
+                MessageBox.Show("Năm xuất bản phải là số", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
             ThongTin_Sach sach = new ThongTin_Sach(txt_BookCode.Text, txt_BookName.Text, txt_AuthName.Text, txt_BookType.Text, txt_Publisher.Text, int.Parse(txt_PublishYear.Text), (Bitmap)PB_Book.Image);
             if (saveMode == 0)
             {
@@ -85,6 +100,8 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                 chiTietPM.DanhSach_SachMuon.Add(txt_BookCode.Text, sach);
                 MessageBox.Show("Thêm sách thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+            //DialogResult = DialogResult.OK;
         }
 
         private void btnBrowse_Click(object sender, EventArgs e)
