@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQuanLySach));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.bookButton1 = new Quan_Ly_Thu_Vien_Winform.Controls.BookButton();
             this.bookButton2 = new Quan_Ly_Thu_Vien_Winform.Controls.BookButton();
@@ -226,7 +227,7 @@
             this.txt_BookCode.TabIndex = 54;
             this.txt_BookCode.TextChanged += new System.EventHandler(this.txt_BookCode_TextChanged);
             // 
-            // BookManager_Form
+            // FormQuanLySach
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -238,7 +239,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "BookManager_Form";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FormQuanLySach";
             this.Text = "Quản lý sách";
             this.Load += new System.EventHandler(this.BookManager_Form_Load);
             this.flowLayoutPanel1.ResumeLayout(false);

@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8-library-50.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -58,6 +61,12 @@
     <Compile Include="DuLieu\ThongTin_PhieuMuon.cs" />
     <Compile Include="DuLieu\ThongTin_PhieuTra.cs" />
     <Compile Include="DuLieu\ThongTin_Sach.cs" />
+    <Compile Include="Forms\FormAddReturnBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddReturnBill.Designer.cs">
+      <DependentUpon>FormAddReturnBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormThemSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +122,9 @@
     <EmbeddedResource Include="Controls\BookButton.resx">
       <DependentUpon>BookButton.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddReturnBill.resx">
+      <DependentUpon>FormAddReturnBill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormThemSach.resx">
       <DependentUpon>FormThemSach.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +174,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-open-book-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8-library-50.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
