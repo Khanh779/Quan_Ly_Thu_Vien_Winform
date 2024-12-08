@@ -63,7 +63,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
                     var chiTe = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.ContainsKey(a.MaPhieuMuon) ? XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon[a.MaPhieuMuon] : null;
 
-                    dataGridView1.Rows.Add(a.MaPhieuMuon, a.MaDocGia, getReaderFullName, a.NgayMuon, a.NgayHenTra, chiTe.TinhTrangTruocKhiMuon, chiTe.SoLuong);
+                    dataGridView1.Rows.Add(a.MaPhieuMuon, a.MaDocGia, getReaderFullName, a.NgayMuon, a.NgayHenTra, chiTe != null ? chiTe.TinhTrangTruocKhiMuon : "", chiTe != null ? chiTe.SoLuong : 0);
                 }
             }
             LB_BorrowBillCount.Text = "Tổng số phiếu mượn: " + dataGridView1.Rows.Count;
