@@ -1,1 +1,1 @@
-Nếu chạy file 'Cap_Nhat_File.exe" thì nhớ đóng cái file .exe đồ án đi
+Nếu chạy file 'Cap_Nhat_File.exe" thì nhớ đóng cái file .exe đồ án trước
