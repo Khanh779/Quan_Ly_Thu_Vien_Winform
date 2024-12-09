@@ -1,6 +1,7 @@
 ﻿using Quan_Ly_Thu_Vien_Winform.DuLieu;
 using System;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace Quan_Ly_Thu_Vien_Winform.Forms
@@ -79,11 +80,11 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
         {
             LayDanhSachSach_Tu_MaPM(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
 
-            var kttt = XuLy_DuLieu.KiemTraPhieuTra_TuMaPhieuMuon(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-            if (kttt == true)
-            {
-                btn_Del.Enabled = !kttt;
-            }
+            //var kttt = XuLy_DuLieu.KiemTraPhieuTra_TuMaPhieuMuon(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            //if (kttt == true)
+            //{
+            //    btn_Del.Enabled = !kttt;
+            //}
         }
 
         private void txt_BorrowFilter_TextChanged(object sender, EventArgs e)
@@ -155,6 +156,12 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             MessageBox.Show("Thêm phiếu mượn thành công", Application.ProductName + " Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             LayDanhSachPhieuMuon();
+
+            if (MessageBox.Show("Ban có muốn tiếp tục?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                this.Close();
+            }
+            txt_BorrowCode.Text = XuLy_DuLieu.TaoMaMuon(txt_ReaderCode.Text);
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

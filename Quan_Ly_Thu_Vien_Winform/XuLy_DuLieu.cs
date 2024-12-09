@@ -22,15 +22,15 @@ namespace Quan_Ly_Thu_Vien_Winform
             return TruyCap_DuLieu.DanhSach_Sach.ContainsKey(maSach);
         }
 
-        public static bool KiemTraPhieuMuon(string maPhieuMuon)
-        {
-            return TruyCap_DuLieu.DanhSach_PhieuMuon.ContainsKey(maPhieuMuon);
-        }
+        //public static bool KiemTraPhieuMuon(string maPhieuMuon)
+        //{
+        //    return TruyCap_DuLieu.DanhSach_PhieuMuon.ContainsKey(maPhieuMuon);
+        //}
 
-        public static bool KiemTraPhieuTra(string maPhieuTra)
-        {
-            return TruyCap_DuLieu.DanhSach_PhieuTra.ContainsKey(maPhieuTra);
-        }
+        //public static bool KiemTraPhieuTra(string maPhieuTra)
+        //{
+        //    return TruyCap_DuLieu.DanhSach_PhieuTra.ContainsKey(maPhieuTra);
+        //}
 
         public static bool KiemTraPhieuTra_TuMaPhieuMuon(string maPhieuMuon)
         {

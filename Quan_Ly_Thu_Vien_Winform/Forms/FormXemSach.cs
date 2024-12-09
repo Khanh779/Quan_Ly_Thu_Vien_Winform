@@ -70,7 +70,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (saveMode == 1)
+            if (saveMode == 1 && checkBox1.Checked)
             {
                 if (!int.TryParse(txt_PublishYear.Text, out int publishYear))
                 {

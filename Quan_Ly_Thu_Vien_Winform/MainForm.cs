@@ -33,11 +33,10 @@ namespace Quan_Ly_Thu_Vien_Winform
 
         private void viewBooksToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormQuanLySach bookManager_Form = new FormQuanLySach
-            {
-                MdiParent = this
-            };
+            var bookManager_Form = FormQuanLySach.Instance;
+            bookManager_Form.MdiParent = this;
             bookManager_Form.Show();
+            bookManager_Form.BringToFront();
         }
 
         private void addBookToolStripMenuItem_Click(object sender, EventArgs e)

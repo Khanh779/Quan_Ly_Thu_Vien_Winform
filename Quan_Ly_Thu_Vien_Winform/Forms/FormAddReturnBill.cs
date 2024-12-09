@@ -78,6 +78,11 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             {
                 this.Close();
             }
+
+            txt_BorrowCode.Text = "";
+            txt_ReturnCode.Text = "";
+            txt_ReaderCode.Text = "";
+            txt_StatusAfterReturn.Text = "";
         }
     }
 }
