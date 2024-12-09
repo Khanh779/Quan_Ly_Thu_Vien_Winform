@@ -113,6 +113,13 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
+            if (txt_BorrowCode.Text == String.Empty)
+            {
+                MessageBox.Show("Vui lòng nhập mã phiếu mượn", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+
             ThongTin_PhieuTra phieuTra = new ThongTin_PhieuTra
             {
                 MaPhieuMuon = txt_BorrowCode.Text,
@@ -155,6 +162,9 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
 
             LayDanhSachPhieuTra();
+
+            txt_BorrowCode.Text = txt_ReturnCode.Text = txt_StatusAfterBorrow.Text = String.Empty;
+
         }
 
 

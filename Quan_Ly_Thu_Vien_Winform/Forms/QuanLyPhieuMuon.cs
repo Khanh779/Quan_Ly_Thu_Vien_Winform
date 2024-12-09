@@ -121,6 +121,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             chiTiet.DanhSach_SachMuon.Add(txt_BookCode.Text, XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach[txt_BookCode.Text]);
             dataGridView2.Rows.Add(txt_BookCode.Text, XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach[txt_BookCode.Text].TenSach, XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach[txt_BookCode.Text].TenTacGia, XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach[txt_BookCode.Text].LoaiSach, XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach[txt_BookCode.Text].NhaXuatBan, XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach[txt_BookCode.Text].NamXuatBan);
 
+            txt_BookCode.Text = "";
 
         }
 
@@ -161,7 +162,8 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             {
                 this.Close();
             }
-            txt_BorrowCode.Text = XuLy_DuLieu.TaoMaMuon(txt_ReaderCode.Text);
+
+            txt_ReaderCode.Text = txt_BookCode.Text = txt_BorrowCode.Text = txt_StatusBeforeBorrow.Text = "";
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
