@@ -100,12 +100,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
                         foreach (var item in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.Values)
                         {
-                            if (item.MaDocGia == getRowSelected.Cells[0].Value.ToString())
-                            {
-                                XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.Remove(item.MaPhieuMuon);
-                                XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.Remove(item.MaPhieuMuon);
-                            }
-
+                            
                             if (XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Values.ToList().Exists(x => x.MaPhieuMuon == item.MaPhieuMuon))
                             {
                                 //foreach (var item1 in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Values)
@@ -124,8 +119,14 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                                     XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuTra.Remove(item1.MaPhieuTra);
                                 }
                             }
-                        }
 
+                            if (item.MaDocGia == getRowSelected.Cells[0].Value.ToString())
+                            {
+                                XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.Remove(item.MaPhieuMuon);
+                                XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.Remove(item.MaPhieuMuon);
+                            }
+
+                        }
 
 
                         XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia.Remove(getRowSelected.Cells[0].Value.ToString());
