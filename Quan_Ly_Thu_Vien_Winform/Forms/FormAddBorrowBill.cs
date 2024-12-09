@@ -57,17 +57,17 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             //    return;
             //}
 
-            if (!XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach.ContainsKey(txt_BookCode.Text))
-            {
-                MessageBox.Show("Mã sách không tồn tại", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
             if (chiTiet.DanhSach_SachMuon.Count <= 0)
             {
                 MessageBox.Show("Vui lòng thêm 1 sách để tiếp tục", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            //if (chiTiet.DanhSach_SachMuon.Count > 0 && !XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach.ContainsKey(txt_BookCode.Text))
+            //{
+            //    MessageBox.Show("Mã sách không tồn tại", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
 
 
             string getMaPM = txt_ReaderID.Text;

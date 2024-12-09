@@ -136,8 +136,13 @@ namespace Quan_Ly_Thu_Vien_Winform
                     TinhTrangTruocKhiMuon = "Tốt",
                     MaPhieuMuon = phieuMuon.MaPhieuMuon
                 };
+
+                chiTiet.DanhSach_SachMuon.Add("S" + i, TruyCap_DuLieu.DanhSach_Sach["S" + i]);
                 if (i % 2 == 0)
-                    chiTiet.DanhSach_SachMuon.Add("S" + i, TruyCap_DuLieu.DanhSach_Sach["S" + i]);
+                {
+                    if (TruyCap_DuLieu.DanhSach_Sach.ContainsKey("S" + i + 1))
+                        chiTiet.DanhSach_SachMuon.Add("S" + i + 1, TruyCap_DuLieu.DanhSach_Sach["S" + i + 1]);
+                }
 
                 if (!TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.ContainsKey(chiTiet.MaPhieuMuon))
                     TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.Add(chiTiet.MaPhieuMuon, chiTiet);

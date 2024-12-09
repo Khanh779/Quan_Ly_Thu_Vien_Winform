@@ -157,5 +157,18 @@ namespace Quan_Ly_Thu_Vien_Winform
             };
             formHistory.Show();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn ghi file không?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                XuLy_DuLieu.GhiFile();
+            }
+        }
     }
 }

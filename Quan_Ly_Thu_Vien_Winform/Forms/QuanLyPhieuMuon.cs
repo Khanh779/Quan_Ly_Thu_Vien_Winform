@@ -137,6 +137,12 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             chiTiet.MaPhieuMuon = phieuMuon.MaPhieuMuon;
             chiTiet.TinhTrangTruocKhiMuon = txt_StatusBeforeBorrow.Text;
 
+            if (XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.ContainsKey(phieuMuon.MaPhieuMuon))
+            {
+                MessageBox.Show("Mã phiếu mượn đã tồn tại do đó không thể thêm", Application.ProductName + " Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.Add(phieuMuon.MaPhieuMuon, phieuMuon);
             XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.Add(chiTiet.MaPhieuMuon, chiTiet);
 
