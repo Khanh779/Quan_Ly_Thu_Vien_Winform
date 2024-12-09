@@ -94,48 +94,46 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                 var getRowSelected = dataGridView1.SelectedRows[0];
                 if (MessageBox.Show("Bạn có chắc chắn muốn xoá độc giả " + getRowSelected.Cells[0].Value.ToString() + " này không?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if (XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia.ContainsKey(getRowSelected.Cells[0].Value.ToString()))
+                    //if (XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia.ContainsKey(getRowSelected.Cells[0].Value.ToString()))
                     {
                         // Xoá các thông tin, chi tiết mượn và trả
 
-                        foreach (var item in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.Values)
+                        foreach (var item in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.Values.ToList())
                         {
-                            
-                            if (XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Values.ToList().Exists(x => x.MaPhieuMuon == item.MaPhieuMuon))
+                            if (item.MaPhieuMuon.Split('-')[1] == getRowSelected.Cells[0].Value.ToString())
                             {
-                                //foreach (var item1 in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Values)
-                                //{
-                                //    if (item1.MaPhieuMuon=)
-                                //    {
-                                //        XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Remove(item.MaPhieuTra);
-                                //        XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuTra.Remove(item.MaPhieuTra);
-                                //    }
-                                //}
-
-                                var a = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Values.ToList().FindAll(x => x.MaPhieuMuon == item.MaPhieuMuon);
-                                foreach (var item1 in a)
+                                if (XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Values.ToList().Exists(x => x.MaPhieuMuon == item.MaPhieuMuon))
                                 {
-                                    XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Remove(item1.MaPhieuTra);
-                                    XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuTra.Remove(item1.MaPhieuTra);
-                                }
-                            }
+                                    foreach (var item1 in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Values.ToList())
+                                    {
+                                        if (item1.MaPhieuMuon == item.MaPhieuMuon)
+                                        {
+                                            XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Remove(item1.MaPhieuTra);
+                                            XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuTra.Remove(item1.MaPhieuTra);
+                                        }
+                                    }
 
-                            if (item.MaDocGia == getRowSelected.Cells[0].Value.ToString())
-                            {
+                                    //var a = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Values.ToList().FindAll(x => x.MaPhieuMuon == item.MaPhieuMuon);
+                                    //foreach (var item1 in a)
+                                    //{
+                                    //    XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Remove(item1.MaPhieuTra);
+                                    //    XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuTra.Remove(item1.MaPhieuTra);
+                                    //}
+                                }
+
                                 XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.Remove(item.MaPhieuMuon);
                                 XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.Remove(item.MaPhieuMuon);
                             }
 
                         }
 
-
                         XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia.Remove(getRowSelected.Cells[0].Value.ToString());
                         MessageBox.Show("Xoá độc giả thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    else
-                    {
-                        MessageBox.Show("Độc giả không tồn tại", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+                    //else
+                    //{
+                    //    MessageBox.Show("Độc giả không tồn tại", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //}
 
                 }
                 LayDanhSach_DocGia();
