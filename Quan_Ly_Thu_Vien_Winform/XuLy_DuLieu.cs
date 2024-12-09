@@ -1,11 +1,8 @@
 ﻿using Quan_Ly_Thu_Vien_Winform.DuLieu;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Quan_Ly_Thu_Vien_Winform
 {
@@ -13,7 +10,7 @@ namespace Quan_Ly_Thu_Vien_Winform
     {
 
         public static TruyCap_DuLieu TruyCap_DuLieu = new TruyCap_DuLieu();
-    
+
 
         public static bool KiemTraDocGia(string maDocGia)
         {
@@ -91,12 +88,14 @@ namespace Quan_Ly_Thu_Vien_Winform
             // Thêm 100 độc giả
             for (int i = 0; i < 100; i++)
             {
-                ThongTin_DocGia docGia = new ThongTin_DocGia();
-                docGia.MaDocGia = "DG" + i;
-                docGia.HoTen = "Độc giả " + i;
-                docGia.DiaChi = "Địa chỉ " + i;
-                docGia.SoDienThoai = "0123456789";
-                docGia.Email = "docgia" + i + "@gmail.com";
+                ThongTin_DocGia docGia = new ThongTin_DocGia
+                {
+                    MaDocGia = "DG" + i,
+                    HoTen = "Độc giả " + i,
+                    DiaChi = "Địa chỉ " + i,
+                    SoDienThoai = "0123456789",
+                    Email = "docgia" + i + "@gmail.com"
+                };
 
                 if (!TruyCap_DuLieu.DanhSach_DocGia.ContainsKey(docGia.MaDocGia))
                     TruyCap_DuLieu.DanhSach_DocGia.Add(docGia.MaDocGia, docGia);
@@ -106,13 +105,15 @@ namespace Quan_Ly_Thu_Vien_Winform
             // Thêm 100 sách
             for (int i = 0; i < 100; i++)
             {
-                ThongTin_Sach sach = new ThongTin_Sach();
-                sach.MaSach = "S" + i;
-                sach.TenSach = "Sách " + i;
-                sach.TenTacGia = "Tác giả " + i;
-                sach.NhaXuatBan = "Nhà xuất bản " + i;
-                sach.NamXuatBan = 2000 + i;
-                sach.LoaiSach = "Loại sách " + i;
+                ThongTin_Sach sach = new ThongTin_Sach
+                {
+                    MaSach = "S" + i,
+                    TenSach = "Sách " + i,
+                    TenTacGia = "Tác giả " + i,
+                    NhaXuatBan = "Nhà xuất bản " + i,
+                    NamXuatBan = 2000 + i,
+                    LoaiSach = "Loại sách " + i
+                };
 
                 if (!TruyCap_DuLieu.DanhSach_Sach.ContainsKey(sach.MaSach))
                     TruyCap_DuLieu.DanhSach_Sach.Add(sach.MaSach, sach);
@@ -121,16 +122,20 @@ namespace Quan_Ly_Thu_Vien_Winform
             // Thêm 40 phiếu mượn
             for (int i = 0; i < 40; i++)
             {
-                ThongTin_PhieuMuon phieuMuon = new ThongTin_PhieuMuon();
-                phieuMuon.MaDocGia = "DG" + i;
+                ThongTin_PhieuMuon phieuMuon = new ThongTin_PhieuMuon
+                {
+                    MaDocGia = "DG" + i
+                };
                 phieuMuon.MaPhieuMuon = TaoMaMuon(phieuMuon.MaDocGia);
                 phieuMuon.NgayMuon = DateTime.Now;
                 phieuMuon.NgayHenTra = DateTime.Now.AddDays(7);
                 TruyCap_DuLieu.DanhSach_PhieuMuon.Add(phieuMuon.MaPhieuMuon, phieuMuon);
 
-                ChiTiet_PhieuMuon chiTiet = new ChiTiet_PhieuMuon();
-                chiTiet.TinhTrangTruocKhiMuon = "Tốt";
-                chiTiet.MaPhieuMuon = phieuMuon.MaPhieuMuon;
+                ChiTiet_PhieuMuon chiTiet = new ChiTiet_PhieuMuon
+                {
+                    TinhTrangTruocKhiMuon = "Tốt",
+                    MaPhieuMuon = phieuMuon.MaPhieuMuon
+                };
                 if (i % 2 == 0)
                     chiTiet.DanhSach_SachMuon.Add("S" + i, TruyCap_DuLieu.DanhSach_Sach["S" + i]);
 
@@ -139,17 +144,21 @@ namespace Quan_Ly_Thu_Vien_Winform
 
                 if (i % 2 == 0)
                 {
-                    ThongTin_PhieuTra phieuTra = new ThongTin_PhieuTra();
-                    phieuTra.MaPhieuMuon = phieuMuon.MaPhieuMuon;
+                    ThongTin_PhieuTra phieuTra = new ThongTin_PhieuTra
+                    {
+                        MaPhieuMuon = phieuMuon.MaPhieuMuon
+                    };
                     phieuTra.MaPhieuTra = phieuTra.MaPhieuMuon.Replace("PM", "PT");
                     phieuTra.NgayTra = DateTime.Now;
 
                     if (!TruyCap_DuLieu.DanhSach_PhieuTra.ContainsKey(phieuTra.MaPhieuTra))
                         TruyCap_DuLieu.DanhSach_PhieuTra.Add(phieuTra.MaPhieuTra, phieuTra);
 
-                    ChiTiet_PhieuTra chiTietPT = new ChiTiet_PhieuTra();
-                    chiTietPT.TinhTrangSauMuon = "Tốt";
-                    chiTietPT.MaPhieuTra = phieuTra.MaPhieuTra;
+                    ChiTiet_PhieuTra chiTietPT = new ChiTiet_PhieuTra
+                    {
+                        TinhTrangSauMuon = "Tốt",
+                        MaPhieuTra = phieuTra.MaPhieuTra
+                    };
 
                     if (!TruyCap_DuLieu.DanhSach_ChiTietPhieuTra.ContainsKey(chiTietPT.MaPhieuTra))
                         TruyCap_DuLieu.DanhSach_ChiTietPhieuTra.Add(chiTietPT.MaPhieuTra, chiTietPT);

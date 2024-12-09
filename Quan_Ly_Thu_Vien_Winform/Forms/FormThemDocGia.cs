@@ -1,12 +1,5 @@
 ﻿using Quan_Ly_Thu_Vien_Winform.DuLieu;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Quan_Ly_Thu_Vien_Winform.Forms
@@ -36,13 +29,13 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia.Add(thongTin_DocGia.MaDocGia, thongTin_DocGia);
             MessageBox.Show("Thêm độc giả thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            if(MessageBox.Show("Bạn có muốn tiếp tục?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn có muốn tiếp tục?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 txt_ReaderCode.Text = txt_ReaderName.Text = txt_Address.Text = txt_NumberPhone.Text = txt_Email.Text = "";
             }
             else
             {
-                this.Close();
+                Close();
             }
         }
     }

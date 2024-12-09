@@ -1,14 +1,6 @@
 ﻿using Quan_Ly_Thu_Vien_Winform.Forms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Quan_Ly_Thu_Vien_Winform
@@ -41,15 +33,19 @@ namespace Quan_Ly_Thu_Vien_Winform
 
         private void viewBooksToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormQuanLySach bookManager_Form = new FormQuanLySach();
-            bookManager_Form.MdiParent = this;
+            FormQuanLySach bookManager_Form = new FormQuanLySach
+            {
+                MdiParent = this
+            };
             bookManager_Form.Show();
         }
 
         private void addBookToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormThemSach addBookForm = new FormThemSach();
-            addBookForm.MdiParent = this;
+            FormThemSach addBookForm = new FormThemSach
+            {
+                MdiParent = this
+            };
             addBookForm.Show();
         }
 
@@ -82,30 +78,38 @@ namespace Quan_Ly_Thu_Vien_Winform
 
         private void readersManagerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormQuanLyDocGia readerManager_Form = new FormQuanLyDocGia();
-            readerManager_Form.MdiParent = this;
+            FormQuanLyDocGia readerManager_Form = new FormQuanLyDocGia
+            {
+                MdiParent = this
+            };
             readerManager_Form.Show();
         }
 
         private void addReaderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormThemDocGia addReader_Form = new FormThemDocGia();
-            addReader_Form.MdiParent = this;
+            FormThemDocGia addReader_Form = new FormThemDocGia
+            {
+                MdiParent = this
+            };
             addReader_Form.Show();
 
         }
 
         private void quảnLýPhiếuMượnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            QuanLyPhieuMuon quanLyPhieuMuon = new QuanLyPhieuMuon();
-            quanLyPhieuMuon.MdiParent = this;
+            QuanLyPhieuMuon quanLyPhieuMuon = new QuanLyPhieuMuon
+            {
+                MdiParent = this
+            };
             quanLyPhieuMuon.Show();
         }
 
         private void quảnLýPhiếuTrảToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            QuanLyPhieuTra quanLyPhieuTra = new QuanLyPhieuTra();
-            quanLyPhieuTra.MdiParent = this;
+            QuanLyPhieuTra quanLyPhieuTra = new QuanLyPhieuTra
+            {
+                MdiParent = this
+            };
             quanLyPhieuTra.Show();
         }
 
@@ -128,23 +132,29 @@ namespace Quan_Ly_Thu_Vien_Winform
 
         private void thêmPhiếuTrảToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormAddReturnBill formAddReturnBill = new FormAddReturnBill();
-            formAddReturnBill.MdiParent = MainForm.Instance;
+            FormAddReturnBill formAddReturnBill = new FormAddReturnBill
+            {
+                MdiParent = MainForm.Instance
+            };
             formAddReturnBill.Show();
 
         }
 
         private void thêmPhiếuMượnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormAddBorrowBill formAddBorrowBill = new FormAddBorrowBill();
-            formAddBorrowBill.MdiParent = MainForm.Instance;
+            FormAddBorrowBill formAddBorrowBill = new FormAddBorrowBill
+            {
+                MdiParent = MainForm.Instance
+            };
             formAddBorrowBill.Show();
         }
 
         private void lịchSửToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormHistory formHistory = new FormHistory();
-            formHistory.MdiParent = MainForm.Instance;
+            FormHistory formHistory = new FormHistory
+            {
+                MdiParent = MainForm.Instance
+            };
             formHistory.Show();
         }
     }

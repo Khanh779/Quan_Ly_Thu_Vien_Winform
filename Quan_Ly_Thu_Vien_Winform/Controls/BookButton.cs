@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Design;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Quan_Ly_Thu_Vien_Winform.Controls
@@ -55,12 +50,12 @@ namespace Quan_Ly_Thu_Vien_Winform.Controls
 
         private void PBB_Click(object sender, EventArgs e)
         {
-            this.OnClick(e);
+            OnClick(e);
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-            this.OnClick(e);
+            OnClick(e);
         }
     }
 }

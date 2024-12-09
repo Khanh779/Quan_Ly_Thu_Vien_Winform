@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Quan_Ly_Thu_Vien_Winform
@@ -50,7 +43,7 @@ namespace Quan_Ly_Thu_Vien_Winform
                 {
                     MessageBox.Show("Đăng nhập thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MainForm.Instance.Show();
-                    this.Hide();
+                    Hide();
                 }
                 else
                 {
@@ -66,7 +59,7 @@ namespace Quan_Ly_Thu_Vien_Winform
         private void button2_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                this.Close();
+                Close();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

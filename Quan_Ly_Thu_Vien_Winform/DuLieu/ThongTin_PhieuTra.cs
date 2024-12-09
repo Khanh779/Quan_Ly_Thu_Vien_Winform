@@ -9,7 +9,7 @@ namespace Quan_Ly_Thu_Vien_Winform.DuLieu
         public string MaPhieuTra { get; set; }
         public DateTime NgayTra { get; set; } = DateTime.Now;
 
-    
+
         public ThongTin_PhieuTra()
         {
         }

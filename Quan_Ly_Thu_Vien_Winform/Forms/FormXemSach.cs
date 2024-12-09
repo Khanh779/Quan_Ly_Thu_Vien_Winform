@@ -1,12 +1,6 @@
 ﻿using Quan_Ly_Thu_Vien_Winform.DuLieu;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Quan_Ly_Thu_Vien_Winform.Forms
@@ -62,8 +56,10 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             bitmapBook.MakeTransparent();
             using (Graphics g = Graphics.FromImage(bitmapBook))
             {
-                OpenFileDialog ofd = new OpenFileDialog();
-                ofd.Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png";
+                OpenFileDialog ofd = new OpenFileDialog
+                {
+                    Filter = "Image files (*.jpg, *.jpeg, *.png) | *.jpg; *.jpeg; *.png"
+                };
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
                     g.DrawImage(new Bitmap(ofd.FileName), 0, 0, 50, 50);

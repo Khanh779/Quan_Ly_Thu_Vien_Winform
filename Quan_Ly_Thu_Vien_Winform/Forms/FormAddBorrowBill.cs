@@ -1,12 +1,6 @@
 ﻿using Quan_Ly_Thu_Vien_Winform.DuLieu;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Quan_Ly_Thu_Vien_Winform.Forms
@@ -70,14 +64,13 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             }
 
             string getMaPM = txt_ReaderID.Text;
-            ThongTin_PhieuMuon phieuMuon = new ThongTin_PhieuMuon();
-
-
-
-            phieuMuon.MaPhieuMuon = txt_BorrowCode.Text;
-            phieuMuon.MaDocGia = txt_ReaderID.Text;
-            phieuMuon.NgayMuon = dateTimePicker1.Value;
-            phieuMuon.NgayHenTra = dateTimePicker2.Value;
+            ThongTin_PhieuMuon phieuMuon = new ThongTin_PhieuMuon
+            {
+                MaPhieuMuon = txt_BorrowCode.Text,
+                MaDocGia = txt_ReaderID.Text,
+                NgayMuon = dateTimePicker1.Value,
+                NgayHenTra = dateTimePicker2.Value
+            };
 
             //chiTiet = new ChiTiet_PhieuMuon();
             chiTiet.MaPhieuMuon = phieuMuon.MaPhieuMuon;
@@ -95,7 +88,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             }
             else
             {
-                this.Close();
+                Close();
             }
 
         }

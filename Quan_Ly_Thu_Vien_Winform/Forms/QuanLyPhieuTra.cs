@@ -1,12 +1,6 @@
 ﻿using Quan_Ly_Thu_Vien_Winform.DuLieu;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Quan_Ly_Thu_Vien_Winform.Forms
@@ -109,10 +103,12 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            ThongTin_PhieuTra phieuTra = new ThongTin_PhieuTra();
-            phieuTra.MaPhieuMuon = txt_BorrowCode.Text;
-            phieuTra.MaPhieuTra = txt_ReturnCode.Text;
-            phieuTra.NgayTra = dateTimePicker2.Value;
+            ThongTin_PhieuTra phieuTra = new ThongTin_PhieuTra
+            {
+                MaPhieuMuon = txt_BorrowCode.Text,
+                MaPhieuTra = txt_ReturnCode.Text,
+                NgayTra = dateTimePicker2.Value
+            };
 
             chiTiet.MaPhieuTra = phieuTra.MaPhieuTra;
             chiTiet.TinhTrangSauMuon = txt_StatusAfterBorrow.Text;
