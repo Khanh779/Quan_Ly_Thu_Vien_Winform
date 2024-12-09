@@ -21,8 +21,8 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                 "Bình thường",
                 "Tăng dần theo mã ĐG",
                 "Giảm dần theo mã ĐG",
-                "Tăng dần theo ngày mượn",
-                "Giảm dần theo ngày mượn"
+                "Tăng dần theo thời gian mượn",
+                "Giảm dần theo thời gian mượn"
             };
         }
 
