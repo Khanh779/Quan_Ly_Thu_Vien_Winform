@@ -66,6 +66,8 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -106,7 +108,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(527, 273);
+            this.dataGridView1.Size = new System.Drawing.Size(546, 339);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             // 
@@ -159,6 +161,8 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.dateTimePicker3);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txt_StatusAfterBorrow);
             this.groupBox1.Controls.Add(this.dateTimePicker2);
@@ -170,9 +174,9 @@
             this.groupBox1.Controls.Add(this.txt_ReturnCode);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.groupBox1.Location = new System.Drawing.Point(566, 47);
+            this.groupBox1.Location = new System.Drawing.Point(585, 47);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(246, 385);
+            this.groupBox1.Size = new System.Drawing.Size(246, 451);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin phiếu trả";
@@ -181,7 +185,7 @@
             // 
             this.label8.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(14, 253);
+            this.label8.Location = new System.Drawing.Point(14, 319);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(168, 21);
             this.label8.TabIndex = 76;
@@ -192,7 +196,7 @@
             this.txt_StatusAfterBorrow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.txt_StatusAfterBorrow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_StatusAfterBorrow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_StatusAfterBorrow.Location = new System.Drawing.Point(18, 277);
+            this.txt_StatusAfterBorrow.Location = new System.Drawing.Point(18, 343);
             this.txt_StatusAfterBorrow.Name = "txt_StatusAfterBorrow";
             this.txt_StatusAfterBorrow.Size = new System.Drawing.Size(210, 25);
             this.txt_StatusAfterBorrow.TabIndex = 75;
@@ -200,6 +204,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
+            this.dateTimePicker2.Enabled = false;
             this.dateTimePicker2.Location = new System.Drawing.Point(18, 221);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(210, 25);
@@ -208,6 +213,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
+            this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Location = new System.Drawing.Point(18, 162);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(210, 25);
@@ -283,7 +289,7 @@
             this.btn_Add.FlatAppearance.BorderSize = 0;
             this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Add.ForeColor = System.Drawing.Color.White;
-            this.btn_Add.Location = new System.Drawing.Point(742, 450);
+            this.btn_Add.Location = new System.Drawing.Point(761, 516);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_Add.Size = new System.Drawing.Size(70, 30);
@@ -297,7 +303,7 @@
             this.LB_BorrowBillCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LB_BorrowBillCount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_BorrowBillCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.LB_BorrowBillCount.Location = new System.Drawing.Point(17, 450);
+            this.LB_BorrowBillCount.Location = new System.Drawing.Point(17, 516);
             this.LB_BorrowBillCount.Name = "LB_BorrowBillCount";
             this.LB_BorrowBillCount.Size = new System.Drawing.Size(197, 21);
             this.LB_BorrowBillCount.TabIndex = 66;
@@ -309,7 +315,7 @@
             this.txt_BorrowFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.txt_BorrowFilter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_BorrowFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_BorrowFilter.Location = new System.Drawing.Point(613, 16);
+            this.txt_BorrowFilter.Location = new System.Drawing.Point(632, 16);
             this.txt_BorrowFilter.Name = "txt_BorrowFilter";
             this.txt_BorrowFilter.Size = new System.Drawing.Size(199, 25);
             this.txt_BorrowFilter.TabIndex = 69;
@@ -320,7 +326,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(562, 18);
+            this.label6.Location = new System.Drawing.Point(581, 18);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 21);
             this.label6.TabIndex = 68;
@@ -352,12 +358,12 @@
             this.Column6,
             this.dataGridViewTextBoxColumn5});
             this.dataGridView2.EnableHeadersVisualStyles = false;
-            this.dataGridView2.Location = new System.Drawing.Point(21, 309);
+            this.dataGridView2.Location = new System.Drawing.Point(21, 375);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(527, 123);
+            this.dataGridView2.Size = new System.Drawing.Size(546, 123);
             this.dataGridView2.TabIndex = 70;
             // 
             // dataGridViewTextBoxColumn1
@@ -395,7 +401,7 @@
             this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(133)))), ((int)(((byte)(237)))));
-            this.linkLabel2.Location = new System.Drawing.Point(650, 450);
+            this.linkLabel2.Location = new System.Drawing.Point(669, 516);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(86, 30);
             this.linkLabel2.TabIndex = 75;
@@ -404,11 +410,29 @@
             this.linkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
+            this.dateTimePicker3.Location = new System.Drawing.Point(18, 282);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(210, 25);
+            this.dateTimePicker3.TabIndex = 78;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label5.Location = new System.Drawing.Point(14, 258);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(122, 21);
+            this.label5.TabIndex = 77;
+            this.label5.Text = "Ngày trả";
+            // 
             // QuanLyPhieuTra
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(831, 489);
+            this.ClientSize = new System.Drawing.Size(850, 555);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.txt_BorrowFilter);
@@ -467,5 +491,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.Label label5;
     }
 }

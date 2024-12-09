@@ -27,18 +27,24 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
         private void txt_BorrowCode_TextChanged(object sender, EventArgs e)
         {
             string maPM = txt_BorrowCode.Text;
-            if (txt_BorrowCode.Text != String.Empty && txt_BorrowCode.Text.Contains("-"))
+            if (maPM.Contains("-"))
             {
-                txt_ReturnCode.Text = XuLy_DuLieu.TaoMaTra(maPM.Split('-')[1]);
-                txt_ReaderCode.Text = maPM.Split('-')[1];
-
-                dateTimePicker1.Value = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.ContainsKey(maPM) ? XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon[maPM].NgayMuon : DateTime.Now;
-
-                dataGridView1.Rows.Clear();
-
-                foreach (var a in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon[maPM].DanhSach_SachMuon.Values)
+                if (txt_BorrowCode.Text != String.Empty && txt_BorrowCode.Text.Contains("-"))
                 {
-                    dataGridView1.Rows.Add(a.MaSach, a.TenSach, a.TenTacGia, a.LoaiSach, a.NhaXuatBan, a.NamXuatBan);
+                    txt_ReturnCode.Text = XuLy_DuLieu.TaoMaTra(maPM.Split('-')[1]);
+                    txt_ReaderCode.Text = maPM.Split('-')[1];
+
+                    dateTimePicker1.Value = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.ContainsKey(maPM) ? XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon[maPM].NgayMuon : DateTime.Now;
+
+                    dataGridView1.Rows.Clear();
+
+                    if (XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.ContainsKey(maPM))
+                    {
+                        foreach (var a in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon[maPM].DanhSach_SachMuon.Values)
+                        {
+                            dataGridView1.Rows.Add(a.MaSach, a.TenSach, a.TenTacGia, a.LoaiSach, a.NhaXuatBan, a.NamXuatBan);
+                        }
+                    }
                 }
             }
 
@@ -66,6 +72,11 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                 XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuTra.Add(chiTiet_PhieuTra.MaPhieuTra, chiTiet_PhieuTra);
 
                 MessageBox.Show("Thêm phiếu trả thành công", Application.ProductName + " Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            if (MessageBox.Show("Bạn có muốn tiếp tục?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                this.Close();
             }
         }
     }

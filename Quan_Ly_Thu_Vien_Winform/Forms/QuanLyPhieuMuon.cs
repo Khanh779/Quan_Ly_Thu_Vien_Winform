@@ -78,6 +78,12 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
         private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             LayDanhSachSach_Tu_MaPM(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+            var kttt = XuLy_DuLieu.KiemTraPhieuTra_TuMaPhieuMuon(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            if (kttt == true)
+            {
+                btn_Del.Enabled = !kttt;
+            }
         }
 
         private void txt_BorrowFilter_TextChanged(object sender, EventArgs e)

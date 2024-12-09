@@ -51,6 +51,13 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                 MessageBox.Show("Vui lòng nhập mã độc giả", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            if (!XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia.ContainsKey(txt_ReaderID.Text))
+            {
+                MessageBox.Show("Mã độc giả không tồn tại", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             //if (txt_BookCode.Text == string.Empty)
             //{
             //    MessageBox.Show("Vui lòng nhập mã sách", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);

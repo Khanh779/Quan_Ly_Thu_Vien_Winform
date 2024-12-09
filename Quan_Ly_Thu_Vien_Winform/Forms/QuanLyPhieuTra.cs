@@ -26,8 +26,6 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
         private void txt_ReaderCode_TextChanged(object sender, EventArgs e)
         {
-            txt_ReturnCode.Text = XuLy_DuLieu.TaoMaTra(txt_BorrowCode.Text);
-
             if (dataGridView1.SelectedRows.Count > 0)
                 dataGridView1.SelectedRows[0].Selected = false;
 
@@ -37,7 +35,19 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             if (dataGridView1.SelectedCells.Count > 0)
                 dataGridView1.SelectedCells[0].Selected = false;
 
-            dataGridView2.Rows.Clear();
+
+            if (txt_BorrowCode.Text.Contains("-"))
+            {
+                txt_ReturnCode.Text = XuLy_DuLieu.TaoMaTra(txt_BorrowCode.Text.Split('-')[1]);
+
+                if (XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.Keys.ToList().Exists(x => x == txt_BorrowCode.Text))
+                {
+                    var a = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon[txt_BorrowCode.Text];
+                    dateTimePicker1.Value = a.NgayMuon;
+                    dateTimePicker2.Value = a.NgayHenTra;
+                }
+            }
+
         }
 
         void LayDanhSachPhieuTra()
