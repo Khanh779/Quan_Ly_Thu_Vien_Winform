@@ -69,6 +69,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                 ChiTiet_PhieuTra chiTiet_PhieuTra = new ChiTiet_PhieuTra(phieuTra.MaPhieuTra, txt_StatusAfterReturn.Text);
 
                 XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Add(phieuTra.MaPhieuTra, phieuTra);
+                XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuTra.Add(chiTiet_PhieuTra.MaPhieuTra, chiTiet_PhieuTra);
 
                 MessageBox.Show("Thêm phiếu trả thành công", Application.ProductName + " Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

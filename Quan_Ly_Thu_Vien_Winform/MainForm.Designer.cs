@@ -43,7 +43,6 @@
             this.thêmPhiếuTrảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýPhiếuTrảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.khácToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đọcFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ghiFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lịchSửToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -160,7 +159,6 @@
             // khácToolStripMenuItem
             // 
             this.khácToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thốngKêToolStripMenuItem,
             this.đọcFileToolStripMenuItem,
             this.ghiFileToolStripMenuItem,
             this.lịchSửToolStripMenuItem,
@@ -168,12 +166,6 @@
             this.khácToolStripMenuItem.Name = "khácToolStripMenuItem";
             this.khácToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.khácToolStripMenuItem.Text = "Khác";
-            // 
-            // thốngKêToolStripMenuItem
-            // 
-            this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
-            this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.thốngKêToolStripMenuItem.Text = "Thống kê";
             // 
             // đọcFileToolStripMenuItem
             // 
@@ -194,6 +186,7 @@
             this.lịchSửToolStripMenuItem.Name = "lịchSửToolStripMenuItem";
             this.lịchSửToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.lịchSửToolStripMenuItem.Text = "Lịch sử";
+            this.lịchSửToolStripMenuItem.Click += new System.EventHandler(this.lịchSửToolStripMenuItem_Click);
             // 
             // createExampleToolStripMenuItem
             // 
@@ -238,7 +231,6 @@
         private System.Windows.Forms.ToolStripMenuItem thêmPhiếuTrảToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýPhiếuTrảToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem khácToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thốngKêToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đọcFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ghiFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lịchSửToolStripMenuItem;

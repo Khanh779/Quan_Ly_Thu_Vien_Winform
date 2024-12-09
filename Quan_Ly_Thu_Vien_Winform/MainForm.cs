@@ -141,6 +141,11 @@ namespace Quan_Ly_Thu_Vien_Winform
             formAddBorrowBill.Show();
         }
 
-  
+        private void lịchSửToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormHistory formHistory = new FormHistory();
+            formHistory.MdiParent = MainForm.Instance;
+            formHistory.Show();
+        }
     }
 }

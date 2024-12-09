@@ -73,6 +73,12 @@
     <Compile Include="Forms\FormAddReturnBill.Designer.cs">
       <DependentUpon>FormAddReturnBill.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormHistory.Designer.cs">
+      <DependentUpon>FormHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormThemSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormAddReturnBill.resx">
       <DependentUpon>FormAddReturnBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormHistory.resx">
+      <DependentUpon>FormHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormThemSach.resx">
       <DependentUpon>FormThemSach.cs</DependentUpon>

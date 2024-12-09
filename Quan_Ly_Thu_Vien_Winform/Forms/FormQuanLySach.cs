@@ -19,7 +19,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             {
                 if (instance == null || instance.IsDisposed)
                     instance = new FormQuanLySach();
-                instance.BringToFront();
+                //instance.BringToFront();
                 return instance;
             }
         }

@@ -19,3 +19,4 @@ D:\Data\Tailieu\Projects\C#\Cac Do An\Quan_Ly_Thu_Vien_Winform\Quan_Ly_Thu_Vien_
 D:\Data\Tailieu\Projects\C#\Cac Do An\Quan_Ly_Thu_Vien_Winform\Quan_Ly_Thu_Vien_Winform\obj\Debug\Quan_Ly_Thu_Vien_Winform.Forms.FormAddReturnBill.resources
 D:\Data\Tailieu\Projects\C#\Cac Do An\Quan_Ly_Thu_Vien_Winform\Quan_Ly_Thu_Vien_Winform\obj\Debug\Quan_Ly_Thu_Vien_Winform.Forms.QuanLyPhieuTra.resources
 D:\Data\Tailieu\Projects\C#\Cac Do An\Quan_Ly_Thu_Vien_Winform\Quan_Ly_Thu_Vien_Winform\obj\Debug\Quan_Ly_Thu_Vien_Winform.Forms.FormAddBorrowBill.resources
+D:\Data\Tailieu\Projects\C#\Cac Do An\Quan_Ly_Thu_Vien_Winform\Quan_Ly_Thu_Vien_Winform\obj\Debug\Quan_Ly_Thu_Vien_Winform.Forms.FormHistory.resources
