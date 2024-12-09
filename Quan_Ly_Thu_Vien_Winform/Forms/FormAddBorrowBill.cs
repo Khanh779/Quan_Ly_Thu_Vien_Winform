@@ -97,6 +97,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             if (MessageBox.Show("Bạn có muốn tiếp tục?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 txt_BookCode.Text = "";
+                txt_BorrowCode.Text = XuLy_DuLieu.TaoMaMuon(getMaPM);
                 txt_StatusBeforeBorrow.Text = "";
                 txt_BookCode.Focus();
             }
