@@ -12,6 +12,8 @@ namespace Quan_Ly_Thu_Vien_Winform.DuLieu
 
         public ThongTin_PhieuTra()
         {
+            MaPhieuMuon = MaPhieuTra = "";
+            NgayTra = DateTime.Now;
         }
 
         public ThongTin_PhieuTra(string maPhieuMuon, string maPhieuTra, string tinhTrangSauKhiTra, DateTime ngayTra)

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-
 namespace Quan_Ly_Thu_Vien_Winform.DuLieu
 {
     [Serializable]
@@ -12,7 +11,6 @@ namespace Quan_Ly_Thu_Vien_Winform.DuLieu
         public string LoaiSach { get; set; }
         public string NhaXuatBan { get; set; }
         public int NamXuatBan { get; set; }
-
         public Bitmap HinhAnh { get; set; } = null;
 
         public ThongTin_Sach()
@@ -21,7 +19,8 @@ namespace Quan_Ly_Thu_Vien_Winform.DuLieu
             NamXuatBan = 0;
         }
 
-        public ThongTin_Sach(string maSach, string tenSach, string tenTacGia, string loaiSach, string nhaXB, int namXB, Bitmap hinhAnh = null)
+        public ThongTin_Sach(string maSach, string tenSach, string tenTacGia, string loaiSach, string nhaXB,
+            int namXB, Bitmap hinhAnh = null)
         {
             MaSach = maSach;
             TenSach = tenSach;

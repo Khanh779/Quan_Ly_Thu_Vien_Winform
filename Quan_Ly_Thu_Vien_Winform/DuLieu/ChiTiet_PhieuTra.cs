@@ -12,8 +12,11 @@ namespace Quan_Ly_Thu_Vien_Winform.DuLieu
         {
             get
             {
-                var a = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.FirstOrDefault(x => x.Value.MaPhieuTra == MaPhieuTra).Value.MaPhieuMuon;
-                var b = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.FirstOrDefault(x => x.Value.MaPhieuMuon == a).Value.DanhSach_SachMuon;
+                var a = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.FirstOrDefault(x => x.Value.MaPhieuTra == MaPhieuTra)
+                    .Value.MaPhieuMuon;
+                var b = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.FirstOrDefault(x => x.Value.MaPhieuMuon == a)
+                    .Value.DanhSach_SachMuon;
+
                 return a != null ? b : new Dictionary<string, ThongTin_Sach>();
             }
         }
@@ -30,6 +33,7 @@ namespace Quan_Ly_Thu_Vien_Winform.DuLieu
 
         public ChiTiet_PhieuTra()
         {
+            MaPhieuTra = TinhTrangSauMuon = "";
         }
 
         public ChiTiet_PhieuTra(string maPhieuTra, string tinhTrangSauMuon)
