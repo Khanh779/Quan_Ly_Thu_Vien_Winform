@@ -121,6 +121,18 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
+            if (txt_ReaderCode.Text == String.Empty)
+            {
+                MessageBox.Show("Chưa nhập mã độc giả", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (chiTiet.DanhSach_SachMuon.Count <= 0)
+            {
+                MessageBox.Show("Vui lòng thêm 1 sách để tiếp tục", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             ThongTin_PhieuMuon phieuMuon = new ThongTin_PhieuMuon(txt_ReaderCode.Text, txt_BorrowCode.Text, dateTimePicker1.Value, dateTimePicker2.Value);
             chiTiet.MaPhieuMuon = phieuMuon.MaPhieuMuon;
             chiTiet.TinhTrangTruocKhiMuon = txt_StatusBeforeBorrow.Text;
