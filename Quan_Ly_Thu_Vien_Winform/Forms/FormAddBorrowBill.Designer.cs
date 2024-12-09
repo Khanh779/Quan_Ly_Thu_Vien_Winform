@@ -90,7 +90,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(572, 204);
+            this.dataGridView1.Size = new System.Drawing.Size(480, 155);
             this.dataGridView1.TabIndex = 71;
             // 
             // dataGridViewTextBoxColumn1
@@ -138,7 +138,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txt_BorrowCode);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(72, 6);
+            this.panel1.Location = new System.Drawing.Point(26, 6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(458, 176);
             this.panel1.TabIndex = 72;
@@ -271,7 +271,7 @@
             this.btn_Add.FlatAppearance.BorderSize = 0;
             this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Add.ForeColor = System.Drawing.Color.White;
-            this.btn_Add.Location = new System.Drawing.Point(461, 398);
+            this.btn_Add.Location = new System.Drawing.Point(369, 349);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_Add.Size = new System.Drawing.Size(123, 30);
@@ -285,7 +285,7 @@
             this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(133)))), ((int)(((byte)(237)))));
-            this.linkLabel2.Location = new System.Drawing.Point(369, 398);
+            this.linkLabel2.Location = new System.Drawing.Point(277, 349);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(86, 30);
             this.linkLabel2.TabIndex = 76;
@@ -299,7 +299,7 @@
             this.linkLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.linkLabel1.Location = new System.Drawing.Point(8, 398);
+            this.linkLabel1.Location = new System.Drawing.Point(8, 349);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(86, 30);
             this.linkLabel1.TabIndex = 77;
@@ -316,7 +316,7 @@
             this.txt_BookCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.txt_BookCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_BookCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_BookCode.Location = new System.Drawing.Point(251, 401);
+            this.txt_BookCode.Location = new System.Drawing.Point(159, 352);
             this.txt_BookCode.Name = "txt_BookCode";
             this.txt_BookCode.Size = new System.Drawing.Size(112, 25);
             this.txt_BookCode.TabIndex = 98;
@@ -326,7 +326,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(606, 440);
+            this.ClientSize = new System.Drawing.Size(514, 391);
             this.Controls.Add(this.txt_BookCode);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.linkLabel2);
@@ -335,6 +335,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(530, 430);
             this.Name = "FormAddBorrowBill";
             this.Text = "Thêm phiếu mượn";
             this.Load += new System.EventHandler(this.FormAddReturnBill_Load);
