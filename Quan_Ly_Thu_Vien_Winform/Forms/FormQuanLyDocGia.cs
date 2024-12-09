@@ -109,9 +109,12 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                 var getRowSelected = dataGridView1.SelectedRows[0];
                 if (MessageBox.Show("Bạn có chắc chắn muốn xoá độc giả " + getRowSelected.Cells[0].Value.ToString() + " này không?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    //if (XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia.ContainsKey(getRowSelected.Cells[0].Value.ToString()))
+                    if (XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.Values.ToList().Exists(x => x.MaDocGia == getRowSelected.Cells[0].Value.ToString()))
                     {
-                        // Xoá các thông tin, chi tiết mượn và trả
+                        if (MessageBox.Show("Cảnh báo độc giả " + getRowSelected.Cells[0].Value.ToString() + " đã hoặc đang mượn sách, bạn có chắc chắn muốn xoá không?\nĐiều này sẽ ảnh hưởng đến các giao dịch trước đó", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                        {
+                            return;
+                        }
 
                         foreach (var item in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.Values.ToList())
                         {
@@ -141,14 +144,10 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                             }
 
                         }
-
-                        XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia.Remove(getRowSelected.Cells[0].Value.ToString());
-                        MessageBox.Show("Xoá độc giả thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    //else
-                    //{
-                    //    MessageBox.Show("Độc giả không tồn tại", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    //}
+
+                    XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia.Remove(getRowSelected.Cells[0].Value.ToString());
+                    MessageBox.Show("Xoá độc giả thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 LayDanhSach_DocGia();
