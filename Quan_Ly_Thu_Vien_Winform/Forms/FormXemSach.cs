@@ -81,6 +81,8 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                 thongTin_Sach = sach;
                 XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach[thongTin_Sach.MaSach] = thongTin_Sach;
                 MessageBox.Show("Cập nhật thành công");
+
+                FormQuanLySach.Instance.layDanhSach_Sach();
             }
             Close();
         }

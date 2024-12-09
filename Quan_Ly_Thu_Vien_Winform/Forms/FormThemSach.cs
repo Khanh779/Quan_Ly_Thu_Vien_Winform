@@ -109,6 +109,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             else
             {
                 Close();
+                FormQuanLySach.Instance.layDanhSach_Sach();
             }
         }
 
