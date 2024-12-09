@@ -1,6 +1,7 @@
 ﻿using Quan_Ly_Thu_Vien_Winform.DuLieu;
 using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace Quan_Ly_Thu_Vien_Winform.Forms
@@ -34,12 +35,25 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             LayDanhSach_DocGia();
         }
 
+        public bool KT_KyTu_DacBiet(string input)
+        {
+            string pattern = @"[^a-zA-Z0-9\s]";
+            return Regex.IsMatch(input, pattern);
+        }
+
         private void btn_Add_Click(object sender, EventArgs e)
         {
             // Kiểm tra thông tin nhập vào đã đủ chưa
             if (txt_ReaderCode.Text == String.Empty || txt_ReaderName.Text == String.Empty || txt_Address.Text == String.Empty || txt_NumberPhone.Text == String.Empty || txt_Email.Text == String.Empty)
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            txt_ReaderCode.Text = txt_ReaderCode.Text.Trim();
+            if (txt_ReaderCode.Text.Contains("-") || txt_ReaderCode.Text.Contains(" ") || txt_ReaderCode.Text.Contains("*"))
+            {
+                MessageBox.Show("Mã độc giả không được chứa ký tự đặc biệt", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
