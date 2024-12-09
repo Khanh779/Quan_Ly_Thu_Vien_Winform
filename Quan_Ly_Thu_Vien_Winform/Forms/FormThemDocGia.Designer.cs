@@ -59,9 +59,9 @@
             this.groupBox1.Controls.Add(this.txt_ReaderCode);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.groupBox1.Location = new System.Drawing.Point(132, 12);
+            this.groupBox1.Location = new System.Drawing.Point(114, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(246, 322);
+            this.groupBox1.Size = new System.Drawing.Size(246, 293);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin độc giả:";
@@ -71,7 +71,7 @@
             this.txt_Email.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.txt_Email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_Email.Location = new System.Drawing.Point(18, 283);
+            this.txt_Email.Location = new System.Drawing.Point(19, 253);
             this.txt_Email.Name = "txt_Email";
             this.txt_Email.Size = new System.Drawing.Size(210, 25);
             this.txt_Email.TabIndex = 63;
@@ -80,7 +80,7 @@
             // 
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(14, 259);
+            this.label5.Location = new System.Drawing.Point(15, 229);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(122, 21);
             this.label5.TabIndex = 62;
@@ -91,7 +91,7 @@
             this.txt_NumberPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.txt_NumberPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_NumberPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_NumberPhone.Location = new System.Drawing.Point(18, 229);
+            this.txt_NumberPhone.Location = new System.Drawing.Point(19, 201);
             this.txt_NumberPhone.Name = "txt_NumberPhone";
             this.txt_NumberPhone.Size = new System.Drawing.Size(210, 25);
             this.txt_NumberPhone.TabIndex = 61;
@@ -100,7 +100,7 @@
             // 
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(14, 205);
+            this.label4.Location = new System.Drawing.Point(15, 177);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(122, 21);
             this.label4.TabIndex = 60;
@@ -111,7 +111,7 @@
             this.txt_Address.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.txt_Address.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Address.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_Address.Location = new System.Drawing.Point(18, 168);
+            this.txt_Address.Location = new System.Drawing.Point(19, 149);
             this.txt_Address.Name = "txt_Address";
             this.txt_Address.Size = new System.Drawing.Size(210, 25);
             this.txt_Address.TabIndex = 59;
@@ -120,7 +120,7 @@
             // 
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(14, 144);
+            this.label3.Location = new System.Drawing.Point(15, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(122, 21);
             this.label3.TabIndex = 58;
@@ -131,7 +131,7 @@
             this.txt_ReaderName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.txt_ReaderName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_ReaderName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_ReaderName.Location = new System.Drawing.Point(18, 108);
+            this.txt_ReaderName.Location = new System.Drawing.Point(19, 97);
             this.txt_ReaderName.Name = "txt_ReaderName";
             this.txt_ReaderName.Size = new System.Drawing.Size(210, 25);
             this.txt_ReaderName.TabIndex = 57;
@@ -140,7 +140,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(14, 84);
+            this.label1.Location = new System.Drawing.Point(15, 73);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 21);
             this.label1.TabIndex = 56;
@@ -151,7 +151,7 @@
             this.txt_ReaderCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.txt_ReaderCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_ReaderCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_ReaderCode.Location = new System.Drawing.Point(18, 56);
+            this.txt_ReaderCode.Location = new System.Drawing.Point(19, 45);
             this.txt_ReaderCode.Name = "txt_ReaderCode";
             this.txt_ReaderCode.Size = new System.Drawing.Size(210, 25);
             this.txt_ReaderCode.TabIndex = 55;
@@ -160,7 +160,7 @@
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(14, 32);
+            this.label2.Location = new System.Drawing.Point(15, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 21);
             this.label2.TabIndex = 12;
@@ -172,7 +172,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(21, 96);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(93, 112);
+            this.pictureBox1.Size = new System.Drawing.Size(78, 112);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -183,7 +183,7 @@
             this.btn_Add.FlatAppearance.BorderSize = 0;
             this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Add.ForeColor = System.Drawing.Color.White;
-            this.btn_Add.Location = new System.Drawing.Point(308, 340);
+            this.btn_Add.Location = new System.Drawing.Point(290, 311);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_Add.Size = new System.Drawing.Size(70, 30);
@@ -192,11 +192,11 @@
             this.btn_Add.UseVisualStyleBackColor = false;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
-            // AddReader_Form
+            // FormThemDocGia
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(396, 385);
+            this.ClientSize = new System.Drawing.Size(373, 351);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
@@ -205,7 +205,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "AddReader_Form";
+            this.Name = "FormThemDocGia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm độc giả";
             this.groupBox1.ResumeLayout(false);

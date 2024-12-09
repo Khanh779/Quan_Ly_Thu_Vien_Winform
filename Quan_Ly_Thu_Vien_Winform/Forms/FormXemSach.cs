@@ -83,6 +83,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                 }
                 ThongTin_Sach sach = new ThongTin_Sach(txt_BookCode.Text, txt_BookName.Text, txt_AuthName.Text, txt_BookType.Text, txt_Publisher.Text, int.Parse(txt_PublishYear.Text), (Bitmap)PB_Book.Image);
                 thongTin_Sach = sach;
+                XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach[thongTin_Sach.MaSach] = thongTin_Sach;
                 MessageBox.Show("Cập nhật thành công");
             }
             Close();

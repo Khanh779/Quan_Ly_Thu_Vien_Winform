@@ -111,7 +111,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(559, 340);
+            this.dataGridView1.Size = new System.Drawing.Size(527, 277);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             // 
@@ -165,9 +165,9 @@
             this.groupBox1.Controls.Add(this.txt_BorrowCode);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.groupBox1.Location = new System.Drawing.Point(598, 47);
+            this.groupBox1.Location = new System.Drawing.Point(566, 47);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(246, 318);
+            this.groupBox1.Size = new System.Drawing.Size(246, 255);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thôn tin phiếu mượn:";
@@ -278,7 +278,7 @@
             this.btn_Edit.FlatAppearance.BorderSize = 0;
             this.btn_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Edit.ForeColor = System.Drawing.Color.White;
-            this.btn_Edit.Location = new System.Drawing.Point(698, 510);
+            this.btn_Edit.Location = new System.Drawing.Point(666, 447);
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_Edit.Size = new System.Drawing.Size(70, 30);
@@ -293,7 +293,7 @@
             this.btn_Del.FlatAppearance.BorderSize = 0;
             this.btn_Del.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Del.ForeColor = System.Drawing.Color.White;
-            this.btn_Del.Location = new System.Drawing.Point(576, 510);
+            this.btn_Del.Location = new System.Drawing.Point(544, 447);
             this.btn_Del.Name = "btn_Del";
             this.btn_Del.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_Del.Size = new System.Drawing.Size(116, 30);
@@ -310,7 +310,7 @@
             this.btn_Add.FlatAppearance.BorderSize = 0;
             this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Add.ForeColor = System.Drawing.Color.White;
-            this.btn_Add.Location = new System.Drawing.Point(774, 510);
+            this.btn_Add.Location = new System.Drawing.Point(742, 447);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_Add.Size = new System.Drawing.Size(70, 30);
@@ -324,7 +324,7 @@
             this.LB_BorrowBillCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LB_BorrowBillCount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_BorrowBillCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.LB_BorrowBillCount.Location = new System.Drawing.Point(18, 519);
+            this.LB_BorrowBillCount.Location = new System.Drawing.Point(18, 456);
             this.LB_BorrowBillCount.Name = "LB_BorrowBillCount";
             this.LB_BorrowBillCount.Size = new System.Drawing.Size(197, 21);
             this.LB_BorrowBillCount.TabIndex = 66;
@@ -336,7 +336,7 @@
             this.txt_BorrowFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.txt_BorrowFilter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_BorrowFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_BorrowFilter.Location = new System.Drawing.Point(645, 16);
+            this.txt_BorrowFilter.Location = new System.Drawing.Point(613, 16);
             this.txt_BorrowFilter.Name = "txt_BorrowFilter";
             this.txt_BorrowFilter.Size = new System.Drawing.Size(199, 25);
             this.txt_BorrowFilter.TabIndex = 69;
@@ -347,7 +347,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(594, 18);
+            this.label6.Location = new System.Drawing.Point(562, 18);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 21);
             this.label6.TabIndex = 68;
@@ -379,12 +379,12 @@
             this.Column6,
             this.dataGridViewTextBoxColumn5});
             this.dataGridView2.EnableHeadersVisualStyles = false;
-            this.dataGridView2.Location = new System.Drawing.Point(22, 371);
+            this.dataGridView2.Location = new System.Drawing.Point(22, 308);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(559, 123);
+            this.dataGridView2.Size = new System.Drawing.Size(527, 123);
             this.dataGridView2.TabIndex = 70;
             // 
             // dataGridViewTextBoxColumn1
@@ -425,7 +425,7 @@
             this.groupBox2.Controls.Add(this.btn_AddBook);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.groupBox2.Location = new System.Drawing.Point(598, 371);
+            this.groupBox2.Location = new System.Drawing.Point(566, 308);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(246, 123);
             this.groupBox2.TabIndex = 71;
@@ -486,7 +486,7 @@
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(18, 498);
+            this.label7.Location = new System.Drawing.Point(18, 435);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(197, 21);
             this.label7.TabIndex = 72;
@@ -497,7 +497,7 @@
             this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(133)))), ((int)(((byte)(237)))));
-            this.linkLabel2.Location = new System.Drawing.Point(484, 510);
+            this.linkLabel2.Location = new System.Drawing.Point(452, 447);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(86, 30);
             this.linkLabel2.TabIndex = 75;
@@ -510,7 +510,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(863, 552);
+            this.ClientSize = new System.Drawing.Size(831, 489);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox2);

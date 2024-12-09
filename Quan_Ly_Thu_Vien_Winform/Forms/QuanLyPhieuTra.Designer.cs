@@ -106,7 +106,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(559, 209);
+            this.dataGridView1.Size = new System.Drawing.Size(527, 273);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             // 
@@ -170,9 +170,9 @@
             this.groupBox1.Controls.Add(this.txt_ReturnCode);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.groupBox1.Location = new System.Drawing.Point(598, 47);
+            this.groupBox1.Location = new System.Drawing.Point(566, 47);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(246, 321);
+            this.groupBox1.Size = new System.Drawing.Size(246, 385);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thôn ting phiếu trả";
@@ -283,7 +283,7 @@
             this.btn_Add.FlatAppearance.BorderSize = 0;
             this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Add.ForeColor = System.Drawing.Color.White;
-            this.btn_Add.Location = new System.Drawing.Point(774, 386);
+            this.btn_Add.Location = new System.Drawing.Point(742, 450);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_Add.Size = new System.Drawing.Size(70, 30);
@@ -297,7 +297,7 @@
             this.LB_BorrowBillCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LB_BorrowBillCount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LB_BorrowBillCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.LB_BorrowBillCount.Location = new System.Drawing.Point(17, 386);
+            this.LB_BorrowBillCount.Location = new System.Drawing.Point(17, 450);
             this.LB_BorrowBillCount.Name = "LB_BorrowBillCount";
             this.LB_BorrowBillCount.Size = new System.Drawing.Size(197, 21);
             this.LB_BorrowBillCount.TabIndex = 66;
@@ -309,7 +309,7 @@
             this.txt_BorrowFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(246)))), ((int)(((byte)(255)))));
             this.txt_BorrowFilter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_BorrowFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_BorrowFilter.Location = new System.Drawing.Point(645, 16);
+            this.txt_BorrowFilter.Location = new System.Drawing.Point(613, 16);
             this.txt_BorrowFilter.Name = "txt_BorrowFilter";
             this.txt_BorrowFilter.Size = new System.Drawing.Size(199, 25);
             this.txt_BorrowFilter.TabIndex = 69;
@@ -320,7 +320,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(594, 18);
+            this.label6.Location = new System.Drawing.Point(562, 18);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 21);
             this.label6.TabIndex = 68;
@@ -352,12 +352,12 @@
             this.Column6,
             this.dataGridViewTextBoxColumn5});
             this.dataGridView2.EnableHeadersVisualStyles = false;
-            this.dataGridView2.Location = new System.Drawing.Point(21, 245);
+            this.dataGridView2.Location = new System.Drawing.Point(21, 309);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(559, 123);
+            this.dataGridView2.Size = new System.Drawing.Size(527, 123);
             this.dataGridView2.TabIndex = 70;
             // 
             // dataGridViewTextBoxColumn1
@@ -395,7 +395,7 @@
             this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(133)))), ((int)(((byte)(237)))));
-            this.linkLabel2.Location = new System.Drawing.Point(682, 386);
+            this.linkLabel2.Location = new System.Drawing.Point(650, 450);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(86, 30);
             this.linkLabel2.TabIndex = 75;
@@ -408,7 +408,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(863, 425);
+            this.ClientSize = new System.Drawing.Size(831, 489);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.txt_BorrowFilter);

@@ -55,7 +55,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                 //if(XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.ContainsKey(b.MaPhieuMuon))
                 {
                     var a = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon[b.MaPhieuMuon];
-                    if (txt_BorrowFilter.Text == String.Empty || a.MaPhieuMuon.ToLower().Contains(txt_BorrowFilter.Text.ToLower()) || a.MaDocGia.ToLower().Contains(txt_BorrowFilter.Text.ToLower()))
+                    if (txt_BorrowFilter.Text == String.Empty || b.MaPhieuTra.ToLower().Contains(txt_BorrowFilter.Text.ToLower()) || b.MaPhieuMuon.ToLower().Contains(txt_BorrowFilter.Text.ToLower()) || a.MaDocGia.ToLower().Contains(txt_BorrowFilter.Text.ToLower()))
                     {
                         string getReaderFullName =
                             XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia.ContainsKey(a.MaDocGia) ? XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia[a.MaDocGia].HoTen : "<ko xác định>";

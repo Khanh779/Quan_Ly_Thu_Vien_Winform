@@ -102,6 +102,8 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                 MessageBox.Show("Thêm sách thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
+            FormQuanLySach.Instance.layDanhSach_Sach();
+
             //DialogResult = DialogResult.OK;
             if (MessageBox.Show("Bạn có muốn tiếp tục?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {

@@ -12,9 +12,23 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 {
     public partial class FormQuanLySach : Form
     {
+        static FormQuanLySach instance = null;
+        public static FormQuanLySach Instance
+        {
+            get
+            {
+                if (instance == null || instance.IsDisposed)
+                    instance = new FormQuanLySach();
+                instance.BringToFront();
+                return instance;
+            }
+        }
+
+
         public FormQuanLySach()
         {
             InitializeComponent();
+            instance = this;
         }
 
         private void BookManager_Form_Load(object sender, EventArgs e)
@@ -23,7 +37,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
         }
 
-        void layDanhSach_Sach()
+        public void layDanhSach_Sach()
         {
             flowLayoutPanel1.Controls.Clear();
             foreach (var item in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_Sach)
