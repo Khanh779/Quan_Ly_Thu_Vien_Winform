@@ -100,6 +100,8 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                 txt_BorrowCode.Text = XuLy_DuLieu.TaoMaMuon(getMaPM);
                 txt_StatusBeforeBorrow.Text = "";
                 txt_BookCode.Focus();
+                chiTiet.DanhSach_SachMuon.Clear();
+                hienThi();
             }
             else
             {
@@ -111,7 +113,6 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             chiTiet.DanhSach_SachMuon.Clear();
-            dataGridView1.Rows.Clear();
             hienThi();
         }
 
