@@ -28,9 +28,5 @@ namespace Quan_Ly_Thu_Vien_Winform.DuLieu
         }
     }
 
-    public enum TrangThaiMuonTra
-    {
-        DangMuon,
-        DaTra
-    }
+
 }
