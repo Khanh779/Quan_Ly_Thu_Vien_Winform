@@ -19,6 +19,14 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                 return;
             }
 
+            txt_ReaderCode.Text = txt_ReaderCode.Text.Trim();
+            txt_ReaderCode.Text = txt_ReaderCode.Text.ToUpper();
+            if (txt_ReaderCode.Text.Contains("-") || txt_ReaderCode.Text.Contains(" ") || txt_ReaderCode.Text.Contains("*"))
+            {
+                MessageBox.Show("Mã độc giả không được chứa ký tự đặc biệt", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (XuLy_DuLieu.KiemTraDocGia(txt_ReaderCode.Text))
             {
                 MessageBox.Show("Mã độc giả đã tồn tại", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
