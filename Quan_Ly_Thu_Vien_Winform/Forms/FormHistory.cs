@@ -16,81 +16,90 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
         private void FormHistory_Load(object sender, EventArgs e)
         {
-            LoadList();
             comboBox1.DataSource = new List<string>
             {
                 "Tất cả",
-                "Chỉ mượn",
-                "Chỉ trả"
+                "Chỉ mượn"
             };
+            dateTimePickerFrom.Value = DateTime.Now.AddDays(-12);
+            dateTimePickerTo.Value = DateTime.Now.AddDays(12);
+            LoadList();
         }
 
         void LoadList()
         {
             dataGridView1.Rows.Clear();
+            List<object[]> rrows = new List<object[]>();
             foreach (var phieuMuon in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.Values)
             {
                 List<object> rrow = new List<object>();
                 var docGia = XuLy_DuLieu.KiemTraDocGia(phieuMuon.MaDocGia) ? XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia[phieuMuon.MaDocGia] : null;
-                var v = docGia != null ? docGia.HoTen : "<ko xác định";
+                var v = docGia != null ? docGia.HoTen : "<Không xác định";
                 rrow.Add(docGia != null ? docGia.MaDocGia : "<Không xác định>");
                 rrow.Add(v);
                 rrow.Add(docGia != null ? docGia.SoDienThoai + "\n" + docGia.Email + "\n" + docGia.DiaChi : "");
 
-                if (comboBox1.SelectedIndex == 0 || comboBox1.SelectedIndex == 1)
+                if (XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.ContainsKey(phieuMuon.MaPhieuMuon))
                 {
-                    if (XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.ContainsKey(phieuMuon.MaPhieuMuon))
-                    {
-                        var chiTietPhieuMuon = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon[phieuMuon.MaPhieuMuon];
-                        rrow.Add(phieuMuon.MaPhieuMuon);
-                        rrow.Add(phieuMuon.NgayMuon);
-                        rrow.Add(phieuMuon.NgayHenTra);
-                        rrow.Add(chiTietPhieuMuon.TinhTrangTruocKhiMuon);
-                    }
+                    var chiTietPhieuMuon = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon[phieuMuon.MaPhieuMuon];
+                    rrow.Add(phieuMuon.MaPhieuMuon);
+                    rrow.Add(phieuMuon.NgayMuon);
+                    rrow.Add(phieuMuon.NgayHenTra);
+                    rrow.Add(chiTietPhieuMuon.TinhTrangTruocKhiMuon);
                 }
 
-                if (comboBox1.SelectedIndex == 0 || comboBox1.SelectedIndex == 2)
+                bool tonTaiPhieuTra = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Values.ToList().Exists(x => x.MaPhieuMuon == phieuMuon.MaPhieuMuon);
+                if (tonTaiPhieuTra)
                 {
-                    if (comboBox1.SelectedIndex == 2)
-                    {
-                        rrow.Add("");
-                        rrow.Add("");
-                        rrow.Add("");
-                        rrow.Add("");
-                    }
+                    var phieuTra = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Values.ToList().Find(x => x.MaPhieuMuon == phieuMuon.MaPhieuMuon);
+                    rrow.Add(phieuTra.MaPhieuTra);
+                    rrow.Add(phieuTra.NgayTra);
 
-                    foreach (var item in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Values)
-                    {
-                        if (XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuTra.ContainsKey(item.MaPhieuTra))
-                        {
-                            var chiTietPhieuTra = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuTra[item.MaPhieuTra];
-                            rrow.Add(item.MaPhieuTra);
-                            rrow.Add(item.NgayTra);
-                            rrow.Add(chiTietPhieuTra.TinhTrangSauMuon);
-                            rrow.Add(chiTietPhieuTra.SoLuongTra);
-                        }
-                    }
+                    var chiTietPhieuTra = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuTra[phieuTra.MaPhieuTra];
+                    rrow.Add(chiTietPhieuTra.TinhTrangSauMuon);
+                    rrow.Add(chiTietPhieuTra.SoLuongTra);
+                }
+                else
+                {
+                    rrow.Add("");
+                    rrow.Add("");
+                    rrow.Add("");
+                    rrow.Add("");
                 }
 
-                //if (txtBillCode.Text == String.Empty ||
-                //       phieuMuon.MaDocGia.ToLower().Contains(txtBillCode.Text.ToLower()) ||
-                //       v.ToLower().Contains(txtBillCode.Text.ToLower()) ||
-                //       phieuMuon.MaPhieuMuon.ToLower().Contains(txtBillCode.Text.ToLower()) ||
-                //       phieuTra.MaPhieuTra.ToLower().Contains(txtBillCode.Text.ToLower()) ||
+                rrows.Add(rrow.ToArray());
+            }
 
-                //       dateTimePickerFrom.Value <= phieuMuon.NgayMuon && phieuMuon.NgayMuon <= dateTimePickerTo.Value ||
-                //       dateTimePickerFrom.Value <= phieuTra.NgayTra && phieuTra.NgayTra <= dateTimePickerTo.Value
-                //   )
 
+            foreach (var rrow in rrows)
+            {
                 if (txtBillCode.Text == String.Empty ||
                     rrow[3].ToString().ToLower().Contains(txtBillCode.Text.ToLower()) ||
-                    rrow[7].ToString().ToLower().Contains(txtBillCode.Text.ToLower()) ||
-                    rrow[4].ToString().ToLower().Contains(txtBillCode.Text.ToLower()) || // ngay muon
-                    rrow[5].ToString().ToLower().Contains(txtBillCode.Text.ToLower()) || // ngay hen tra
-                    rrow[8].ToString().ToLower().Contains(txtBillCode.Text.ToLower())  // ngay tra
+                    rrow[7].ToString().ToLower().Contains(txtBillCode.Text.ToLower())
+
                 )
                 {
-                    dataGridView1.Rows.Add(rrow.ToArray());
+
+                    if (comboBox1.SelectedIndex == 1)
+                    {
+                        if (rrow[7] == null)
+                            continue;
+                    }
+
+                    if (dateTimePickerFrom.Value > Convert.ToDateTime(rrow[4]) || Convert.ToDateTime(rrow[4]) > dateTimePickerTo.Value)
+                    {
+                        continue;
+                    }
+                    if (dateTimePickerFrom.Value > Convert.ToDateTime(rrow[5]) || Convert.ToDateTime(rrow[5]) > dateTimePickerTo.Value)
+                    {
+                        continue;
+                    }
+                    if (comboBox1.SelectedIndex == 1 && (dateTimePickerTo.Value > Convert.ToDateTime(rrow[8]) || Convert.ToDateTime(rrow[8]) > dateTimePickerTo.Value))
+                    {
+                        continue;
+                    }
+
+                    dataGridView1.Rows.Add(rrow);
                 }
 
             }
@@ -134,7 +143,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           // LoadList();
+            // LoadList();
         }
     }
 }
