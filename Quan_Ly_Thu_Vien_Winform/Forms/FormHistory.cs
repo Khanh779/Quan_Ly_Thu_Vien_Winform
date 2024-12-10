@@ -114,7 +114,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
         private void dateTimePickerFrom_ValueChanged(object sender, EventArgs e)
         {
-            if (dateTimePickerFrom.Value > dateTimePickerTo.Value)
+            if (dateTimePickerFrom.Value >= dateTimePickerTo.Value)
             {
                 dateTimePickerFrom.Value = dateTimePickerTo.Value.AddDays(-1);
             }
@@ -122,7 +122,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
         private void dateTimePickerTo_ValueChanged(object sender, EventArgs e)
         {
-            if (dateTimePickerTo.Value < dateTimePickerFrom.Value)
+            if (dateTimePickerTo.Value <= dateTimePickerFrom.Value)
             {
                 dateTimePickerTo.Value = dateTimePickerFrom.Value.AddDays(1);
             }
