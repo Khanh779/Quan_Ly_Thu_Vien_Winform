@@ -123,7 +123,7 @@ namespace Quan_Ly_Thu_Vien_Winform
                         return;
                     }
                 }
-
+                XuLy_DuLieu.TruyCap_DuLieu = new TruyCap_DuLieu();
                 XuLy_DuLieu.TaoVidu();
                 MessageBox.Show("Tạo dữ liệu mẫu thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
