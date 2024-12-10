@@ -89,15 +89,11 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                     {
                         continue;
                     }
-                    if (dateTimePickerFrom.Value > Convert.ToDateTime(rrow[5]) || Convert.ToDateTime(rrow[5]) > dateTimePickerTo.Value)
+                    if (dateTimePickerTo.Value > Convert.ToDateTime(rrow[5]) || Convert.ToDateTime(rrow[5]) > dateTimePickerTo.Value)
                     {
                         continue;
                     }
 
-                    if (rrow[8].ToString() != "" && (dateTimePickerTo.Value > Convert.ToDateTime(rrow[8]) || Convert.ToDateTime(rrow[8]) > dateTimePickerTo.Value))
-                    {
-                        continue;
-                    }
 
                     dataGridView1.Rows.Add(rrow);
                 }
