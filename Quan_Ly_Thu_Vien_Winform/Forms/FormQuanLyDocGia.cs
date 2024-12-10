@@ -35,11 +35,11 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             LayDanhSach_DocGia();
         }
 
-        public bool KT_KyTu_DacBiet(string input)
-        {
-            string pattern = @"[^a-zA-Z0-9\s]";
-            return Regex.IsMatch(input, pattern);
-        }
+        //public bool KT_KyTu_DacBiet(string input)
+        //{
+        //    string pattern = @"[^a-zA-Z0-9\s]";
+        //    return Regex.IsMatch(input, pattern);
+        //}
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
@@ -52,7 +52,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
             txt_ReaderCode.Text = txt_ReaderCode.Text.Trim();
             txt_ReaderCode.Text = txt_ReaderCode.Text.ToUpper();
-            if (txt_ReaderCode.Text.Contains("-") || txt_ReaderCode.Text.Contains(" ") || txt_ReaderCode.Text.Contains("*"))
+            if (XuLy_DuLieu.KiemTra_KyTu_DacBiet(txt_ReaderCode.Text))
             {
                 MessageBox.Show("Mã độc giả không được chứa ký tự đặc biệt", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;

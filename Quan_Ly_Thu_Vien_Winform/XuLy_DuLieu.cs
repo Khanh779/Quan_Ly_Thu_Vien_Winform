@@ -22,6 +22,11 @@ namespace Quan_Ly_Thu_Vien_Winform
             return TruyCap_DuLieu.DanhSach_Sach.ContainsKey(maSach);
         }
 
+        public static bool KiemTra_KyTu_DacBiet(string chuoi)
+        {
+            return chuoi.Any(char.IsPunctuation);
+        }
+
         //public static bool KiemTraPhieuMuon(string maPhieuMuon)
         //{
         //    return TruyCap_DuLieu.DanhSach_PhieuMuon.ContainsKey(maPhieuMuon);
