@@ -309,7 +309,7 @@
             this.MinimizeBox = false;
             this.Name = "FormXemSach";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Thêm sách";
+            this.Text = "Xem";
             this.Load += new System.EventHandler(this.ViewBookForm_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
