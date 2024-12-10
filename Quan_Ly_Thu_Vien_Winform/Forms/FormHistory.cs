@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Quan_Ly_Thu_Vien_Winform.DuLieu;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -18,77 +19,82 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
             LoadList();
             comboBox1.DataSource = new List<string>
             {
-                "Bình thường",
-                "Tăng dần theo mã ĐG",
-                "Giảm dần theo mã ĐG",
-                "Tăng dần theo thời gian mượn",
-                "Giảm dần theo thời gian mượn"
+                "Tất cả",
+                "Chỉ mượn",
+                "Chỉ trả"
             };
         }
 
         void LoadList()
         {
             dataGridView1.Rows.Clear();
-            List<object[]> objects = new List<object[]>();
-            foreach (var docGia in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia.Values)
+            foreach (var phieuMuon in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.Values)
             {
-                foreach (var phieuMuon in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuMuon.Values)
+                List<object> rrow = new List<object>();
+                var docGia = XuLy_DuLieu.KiemTraDocGia(phieuMuon.MaDocGia) ? XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia[phieuMuon.MaDocGia] : null;
+                var v = docGia != null ? docGia.HoTen : "<ko xác định";
+                rrow.Add(docGia != null ? docGia.MaDocGia : "<Không xác định>");
+                rrow.Add(v);
+                rrow.Add(docGia != null ? docGia.SoDienThoai + "\n" + docGia.Email + "\n" + docGia.DiaChi : "");
+
+                if (comboBox1.SelectedIndex == 0 || comboBox1.SelectedIndex == 1)
                 {
-
-                    foreach (var phieuTra in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Values)
+                    if (XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon.ContainsKey(phieuMuon.MaPhieuMuon))
                     {
-                        if (phieuMuon.MaDocGia == docGia.MaDocGia && phieuTra.MaPhieuMuon == phieuMuon.MaPhieuMuon)
+                        var chiTietPhieuMuon = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon[phieuMuon.MaPhieuMuon];
+                        rrow.Add(phieuMuon.MaPhieuMuon);
+                        rrow.Add(phieuMuon.NgayMuon);
+                        rrow.Add(phieuMuon.NgayHenTra);
+                        rrow.Add(chiTietPhieuMuon.TinhTrangTruocKhiMuon);
+                    }
+                }
+
+                if (comboBox1.SelectedIndex == 0 || comboBox1.SelectedIndex == 2)
+                {
+                    if (comboBox1.SelectedIndex == 2)
+                    {
+                        rrow.Add("");
+                        rrow.Add("");
+                        rrow.Add("");
+                        rrow.Add("");
+                    }
+
+                    foreach (var item in XuLy_DuLieu.TruyCap_DuLieu.DanhSach_PhieuTra.Values)
+                    {
+                        if (XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuTra.ContainsKey(item.MaPhieuTra))
                         {
-                            if (txtBillCode.Text == String.Empty ||
-                                docGia.MaDocGia.ToLower().Contains(txtBillCode.Text.ToLower()) ||
-                                docGia.HoTen.ToLower().Contains(txtBillCode.Text.ToLower()) ||
-                                phieuMuon.MaPhieuMuon.ToLower().Contains(txtBillCode.Text.ToLower()) ||
-                                phieuTra.MaPhieuTra.ToLower().Contains(txtBillCode.Text.ToLower()) ||
-
-                                dateTimePickerFrom.Value <= phieuMuon.NgayMuon && phieuMuon.NgayMuon <= dateTimePickerTo.Value ||
-                                dateTimePickerFrom.Value <= phieuTra.NgayTra && phieuTra.NgayTra <= dateTimePickerTo.Value
-                            )
-                            {
-                                var chiTietPhieuMuon = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuMuon[phieuMuon.MaPhieuMuon];
-                                var chiTietPhieuTra = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuTra[phieuTra.MaPhieuTra];
-
-                                //dataGridView1.Rows.Add(docGia.MaDocGia, docGia.HoTen, docGia.SoDienThoai + "\n" + docGia.Email + "\n" + docGia.DiaChi,
-                                //     phieuMuon.NgayMuon, phieuTra.NgayTra, phieuMuon.MaPhieuMuon, phieuTra.MaPhieuTra,
-                                //     chiTietPhieuMuon.TinhTrangTruocKhiMuon, chiTietPhieuTra.TinhTrangSauMuon, chiTietPhieuMuon.SoLuong);
-
-                                objects.Add(new object[] { docGia.MaDocGia, docGia.HoTen, docGia.SoDienThoai + "\n" + docGia.Email + "\n" + docGia.DiaChi,
-                                     phieuMuon.NgayMuon, phieuTra.NgayTra, phieuMuon.MaPhieuMuon, phieuTra.MaPhieuTra,
-                                     chiTietPhieuMuon.TinhTrangTruocKhiMuon, chiTietPhieuTra.TinhTrangSauMuon, chiTietPhieuMuon.SoLuong });
-                            }
+                            var chiTietPhieuTra = XuLy_DuLieu.TruyCap_DuLieu.DanhSach_ChiTietPhieuTra[item.MaPhieuTra];
+                            rrow.Add(item.MaPhieuTra);
+                            rrow.Add(item.NgayTra);
+                            rrow.Add(chiTietPhieuTra.TinhTrangSauMuon);
+                            rrow.Add(chiTietPhieuTra.SoLuongTra);
                         }
                     }
                 }
 
-            }
+                //if (txtBillCode.Text == String.Empty ||
+                //       phieuMuon.MaDocGia.ToLower().Contains(txtBillCode.Text.ToLower()) ||
+                //       v.ToLower().Contains(txtBillCode.Text.ToLower()) ||
+                //       phieuMuon.MaPhieuMuon.ToLower().Contains(txtBillCode.Text.ToLower()) ||
+                //       phieuTra.MaPhieuTra.ToLower().Contains(txtBillCode.Text.ToLower()) ||
 
-            if (comboBox1.SelectedIndex == 1)
-            {
-                objects = objects.OrderBy(x => x[0]).ToList();
-            }
-            else if (comboBox1.SelectedIndex == 2)
-            {
-                objects = objects.OrderByDescending(x => x[0]).ToList();
-            }
-            else if (comboBox1.SelectedIndex == 3)
-            {
-                objects = objects.OrderBy(x => x[3]).ToList();
-            }
-            else if (comboBox1.SelectedIndex == 4)
-            {
-                objects = objects.OrderByDescending(x => x[3]).ToList();
-            }
+                //       dateTimePickerFrom.Value <= phieuMuon.NgayMuon && phieuMuon.NgayMuon <= dateTimePickerTo.Value ||
+                //       dateTimePickerFrom.Value <= phieuTra.NgayTra && phieuTra.NgayTra <= dateTimePickerTo.Value
+                //   )
 
-            foreach (var obj in objects)
-            {
-                dataGridView1.Rows.Add(obj);
-            }
+                if (txtBillCode.Text == String.Empty ||
+                    rrow[3].ToString().ToLower().Contains(txtBillCode.Text.ToLower()) ||
+                    rrow[7].ToString().ToLower().Contains(txtBillCode.Text.ToLower()) ||
+                    rrow[4].ToString().ToLower().Contains(txtBillCode.Text.ToLower()) || // ngay muon
+                    rrow[5].ToString().ToLower().Contains(txtBillCode.Text.ToLower()) || // ngay hen tra
+                    rrow[8].ToString().ToLower().Contains(txtBillCode.Text.ToLower())  // ngay tra
+                )
+                {
+                    dataGridView1.Rows.Add(rrow.ToArray());
+                }
 
-            LB_BorrowBillCount.Text = "Tổng số phiếu mượn: " + dataGridView1.Rows.Count;
+            }
+            LB_BorrowBillCount.Text = "Tổng số: " + dataGridView1.Rows.Count;
         }
 
         private void txtBillCode_TextChanged(object sender, EventArgs e)
@@ -128,7 +134,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LoadList();
+           // LoadList();
         }
     }
 }
