@@ -144,7 +144,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
             if (XuLy_DuLieu.KiemTraPhieuTra_TuMaPhieuMuon(phieuTra.MaPhieuMuon))
             {
-                MessageBox.Show("Phiếu mượn đã được trả, tiếp tục xử lý", Application.ProductName + " Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Phiếu mượn đã được trả!", Application.ProductName + " Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
