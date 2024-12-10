@@ -43,30 +43,35 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            // Kiểm tra thông tin nhập vào đã đủ chưa
-            if (txt_ReaderCode.Text == String.Empty || txt_ReaderName.Text == String.Empty || txt_Address.Text == String.Empty || txt_NumberPhone.Text == String.Empty || txt_Email.Text == String.Empty)
-            {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            //// Kiểm tra thông tin nhập vào đã đủ chưa
+            //if (txt_ReaderCode.Text == String.Empty || txt_ReaderName.Text == String.Empty || txt_Address.Text == String.Empty || txt_NumberPhone.Text == String.Empty || txt_Email.Text == String.Empty)
+            //{
+            //    MessageBox.Show("Vui lòng nhập đầy đủ thông tin", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
 
-            txt_ReaderCode.Text = txt_ReaderCode.Text.Trim();
-            txt_ReaderCode.Text = txt_ReaderCode.Text.ToUpper();
-            if (XuLy_DuLieu.KiemTra_KyTu_DacBiet(txt_ReaderCode.Text))
-            {
-                MessageBox.Show("Mã độc giả không được chứa ký tự đặc biệt", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            //txt_ReaderCode.Text = txt_ReaderCode.Text.Trim();
+            //txt_ReaderCode.Text = txt_ReaderCode.Text.ToUpper();
+            //if (XuLy_DuLieu.KiemTra_KyTu_DacBiet(txt_ReaderCode.Text))
+            //{
+            //    MessageBox.Show("Mã độc giả không được chứa ký tự đặc biệt", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
 
-            if (XuLy_DuLieu.KiemTraDocGia(txt_ReaderCode.Text))
-            {
-                MessageBox.Show("Mã độc giả đã tồn tại", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            //if (XuLy_DuLieu.KiemTraDocGia(txt_ReaderCode.Text))
+            //{
+            //    MessageBox.Show("Mã độc giả đã tồn tại", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
 
-            ThongTin_DocGia thongTin_DocGia = new ThongTin_DocGia(txt_ReaderCode.Text, txt_ReaderName.Text, txt_Address.Text, txt_NumberPhone.Text, txt_Email.Text);
-            XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia.Add(thongTin_DocGia.MaDocGia, thongTin_DocGia);
-            MessageBox.Show("Thêm độc giả thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //ThongTin_DocGia thongTin_DocGia = new ThongTin_DocGia(txt_ReaderCode.Text, txt_ReaderName.Text, txt_Address.Text, txt_NumberPhone.Text, txt_Email.Text);
+            //XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia.Add(thongTin_DocGia.MaDocGia, thongTin_DocGia);
+            //MessageBox.Show("Thêm độc giả thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            FormThemDocGia formThemDocGia = new FormThemDocGia();
+            formThemDocGia.MdiParent = MainForm.Instance;
+            formThemDocGia.Show();
+
             LayDanhSach_DocGia();
         }
 
