@@ -86,13 +86,20 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                var getRowSelected = dataGridView1.SelectedRows[0];
-                if (MessageBox.Show("Bạn có chắc chắn muốn xoá độc giả " + getRowSelected.Cells[0].Value.ToString() + " này không?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                //var getRowSelected = dataGridView1.SelectedRows[0];
+                if (XuLy_DuLieu.KiemTraDocGia(txt_ReaderCode.Text))
                 {
-                    ThongTin_DocGia thongTin_DocGia = new ThongTin_DocGia(txt_ReaderCode.Text, txt_ReaderName.Text, txt_Address.Text, txt_NumberPhone.Text, txt_Email.Text);
+                    if (MessageBox.Show("Bạn có chắc chắn muốn sửa độc giả " + txt_ReaderCode.Text + " này không?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        ThongTin_DocGia thongTin_DocGia = new ThongTin_DocGia(txt_ReaderCode.Text, txt_ReaderName.Text, txt_Address.Text, txt_NumberPhone.Text, txt_Email.Text);
 
-                    XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia[thongTin_DocGia.MaDocGia] = thongTin_DocGia;
-                    MessageBox.Show("Sửa thông tin độc giả thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        XuLy_DuLieu.TruyCap_DuLieu.DanhSach_DocGia[thongTin_DocGia.MaDocGia] = thongTin_DocGia;
+                        MessageBox.Show("Sửa thông tin độc giả thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Mã độc giả " + txt_ReaderCode.Text + " không tồn tại", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 LayDanhSach_DocGia();
             }
