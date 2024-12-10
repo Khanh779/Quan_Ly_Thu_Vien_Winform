@@ -66,7 +66,6 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                     rrow.Add("");
                     rrow.Add("");
                 }
-
                 rrows.Add(rrow.ToArray());
             }
 
@@ -82,7 +81,7 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
 
                     if (comboBox1.SelectedIndex == 1)
                     {
-                        if (rrow[7] == null)
+                        if (rrow[7].ToString() == "")
                             continue;
                     }
 
@@ -94,7 +93,8 @@ namespace Quan_Ly_Thu_Vien_Winform.Forms
                     {
                         continue;
                     }
-                    if (comboBox1.SelectedIndex == 1 && (dateTimePickerTo.Value > Convert.ToDateTime(rrow[8]) || Convert.ToDateTime(rrow[8]) > dateTimePickerTo.Value))
+
+                    if (rrow[8].ToString() != "" && (dateTimePickerTo.Value > Convert.ToDateTime(rrow[8]) || Convert.ToDateTime(rrow[8]) > dateTimePickerTo.Value))
                     {
                         continue;
                     }
