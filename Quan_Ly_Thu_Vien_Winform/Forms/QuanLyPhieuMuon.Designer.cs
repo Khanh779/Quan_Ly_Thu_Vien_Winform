@@ -51,7 +51,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_BorrowCode = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_Edit = new System.Windows.Forms.Button();
             this.btn_Del = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
             this.LB_BorrowBillCount = new System.Windows.Forms.Label();
@@ -271,21 +270,6 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Mã độc giả";
             // 
-            // btn_Edit
-            // 
-            this.btn_Edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Edit.BackColor = System.Drawing.Color.SeaGreen;
-            this.btn_Edit.FlatAppearance.BorderSize = 0;
-            this.btn_Edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Edit.ForeColor = System.Drawing.Color.White;
-            this.btn_Edit.Location = new System.Drawing.Point(587, 510);
-            this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btn_Edit.Size = new System.Drawing.Size(70, 30);
-            this.btn_Edit.TabIndex = 15;
-            this.btn_Edit.Text = "Sửa";
-            this.btn_Edit.UseVisualStyleBackColor = false;
-            // 
             // btn_Del
             // 
             this.btn_Del.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -293,7 +277,7 @@
             this.btn_Del.FlatAppearance.BorderSize = 0;
             this.btn_Del.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Del.ForeColor = System.Drawing.Color.White;
-            this.btn_Del.Location = new System.Drawing.Point(465, 510);
+            this.btn_Del.Location = new System.Drawing.Point(541, 510);
             this.btn_Del.Name = "btn_Del";
             this.btn_Del.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_Del.Size = new System.Drawing.Size(116, 30);
@@ -497,7 +481,7 @@
             this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(133)))), ((int)(((byte)(237)))));
-            this.linkLabel2.Location = new System.Drawing.Point(373, 510);
+            this.linkLabel2.Location = new System.Drawing.Point(449, 510);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(86, 30);
             this.linkLabel2.TabIndex = 75;
@@ -518,7 +502,6 @@
             this.Controls.Add(this.txt_BorrowFilter);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.LB_BorrowBillCount);
-            this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.btn_Del);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.groupBox1);
@@ -550,7 +533,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_BorrowCode;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_Edit;
         private System.Windows.Forms.Button btn_Del;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Label LB_BorrowBillCount;
